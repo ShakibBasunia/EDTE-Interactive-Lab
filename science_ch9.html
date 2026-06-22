@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="bn" class="lang-bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Biomolecules · Class 9-10 Science Portal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@500;600&family=Tiro+Bangla&family=Hind+Siliguri:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="science_style.css">
+</head>
+<body>
+
+<div class="app-container">
+  
+  <!-- PERSISTENT SIDEBAR INJECTED VIA COMMON.JS -->
+  <div class="sidebar" id="sidebar"></div>
+
+  <!-- MAIN CHAPTER CONTENT -->
+  <main class="main-content">
+    
+    <header class="lesson-header">
+      <div class="lesson-meta">
+        <span class="subject-badge biology">Biology</span>
+        <span class="eyebrow">Chapter 09</span>
+      </div>
+      <h1>
+        <span class="bn">জৈব অণু</span>
+        <span class="en">Biomolecules</span>
+      </h1>
+    </header>
+
+    <div class="grid2">
+      <!-- LEFT PANE: LESSONS, ACTIVITIES, EXTRA EXAMPLES, AND QUIZ -->
+      <div style="display:flex; flex-direction:column; gap:20px;">
+        <div class="content-pane">
+          <div class="tab-nav">
+            <button class="tab-btn active" onclick="switchTab(this, 'lesson')">
+              <span class="bn">📖 মূল তথ্য</span><span class="en">📖 Core Info</span>
+            </button>
+            <button class="tab-btn" onclick="switchTab(this, 'activity')">
+              <span class="bn">🏫 শ্রেণিকক্ষ কার্যক্রম</span><span class="en">🏫 Activities</span>
+            </button>
+            <button class="tab-btn" onclick="switchTab(this, 'examples')">
+              <span class="bn">💡 আরও উদাহরণ</span><span class="en">💡 More Examples</span>
+            </button>
+            <button class="tab-btn" onclick="switchTab(this, 'quiz')" id="quizTabBtn">
+              <span class="bn">📝 কুইজ টেস্ট</span><span class="en">📝 Quiz Test</span>
+            </button>
+          </div>
+          
+          <!-- TAB 1: THEORY -->
+          <div class="tab-content active" id="tab-lesson">
+            <p class="lede" style="font-size:1.1rem; line-height:1.6; color:var(--cyan); margin-bottom:15px;">
+              <span class="bn">আমাদের শরীর শর্করা, আমিষ ও স্নেহ পদার্থের মতো জটিল রাসায়নিক অণু দ্বারা গঠিত ও চালিত হয়।</span>
+              <span class="en">Biological systems require structural and energetic inputs from carbohydrates, proteins, and lipids.</span>
+            </p>
+            <div style="line-height:1.6; font-size:0.92rem; opacity:0.9;">
+              
+      <p class="bn"><b>১. প্রধান জৈব অণুসমূহ:</b> মানব দেহ ও খাদ্যের প্রধান তিনটি উপাদান হলো: শর্করা বা কার্বোহাইড্রেট (শক্তির মূল উৎস, যেমন চাল ও আলু), আমিষ বা প্রোটিন (কোষ ও টিস্যু গঠনে ব্যবহৃত, যেমন মাছ ও ডিম) এবং স্নেহ বা লিপিড (কোষঝিল্লি তৈরিতে ও শক্তি সঞ্চয়ে ব্যবহৃত, যেমন ঘি ও তেল)।</p>
+      <p class="en"><b>1. Primary Biomolecules:</b> Carbohydrates (primary energy, e.g. Rice, Potato), Proteins (cellular structure, e.g. Fish, Egg), and Lipids (energy storage, e.g. Butter, Oil).</p>
+      <p class="bn"><b>২. পরীক্ষা:</b> শর্করা পরীক্ষার জন্য আয়োডিন ব্যবহার করা হয় যা স্টার্চের উপস্থিতিতে নীল-কালো বর্ণ ধারণ করে। প্রোটিন সনাক্তকরণে সোডিয়াম হাইড্রোক্সাইড ও কপার সালফেট ব্যবহার করা হয়।</p>
+      <p class="en"><b>2. Identification Tests:</b> Iodine turns starch dark blue-black. Biuret test identifies protein bonds.</p>
+    
+            </div>
+          </div>
+          
+          <!-- TAB 2: ACTIVITIES -->
+          <div class="tab-content" id="tab-activity">
+            <ul class="activity-list">
+              <li>
+                <span class="activity-tag">OUTCOME</span>
+                <strong><span class="bn">শিখনফল:</span><span class="en">Learning Outcome:</span></strong><br>
+                <span class="bn">কার্বোহাইড্রেট, প্রোটিন এবং লিপিডের পুষ্টিগুণ ও গুরুত্ব শ্রেণীবদ্ধ করা।</span>
+                <span class="en">Categorize nutritional foods into Carbohydrates, Proteins, and Lipids.</span>
+              </li>
+              <li>
+                <span class="activity-tag" style="background:rgba(95,224,224,0.15); color:var(--cyan);">ACTIVITY</span>
+                <strong><span class="bn">কার্যক্রম:</span><span class="en">Class Activity:</span></strong><br>
+                <span class="bn">অ্যান্ড্রয়েড ল্যাবে খাদ্য উপাদানগুলোকে ড্র্যাগ করে তাদের সঠিক পুষ্টি কোঠায় ফেলুন।</span>
+                <span class="en">Drag and drop nutrient items into their correct structural folders.</span>
+              </li>
+            </ul>
+          </div>
+          
+          <!-- TAB 3: EXTRA EXAMPLES / CALCULATORS -->
+          <div class="tab-content" id="tab-examples">
+            
+      <div style="background:rgba(255,255,255,0.03); border:1px solid var(--line); padding:15px; border-radius:8px;">
+        <h4 style="margin-top:0; color:var(--chalk-yellow);"><span class="bn">🔥 ক্যালোরি কাউন্টার ক্যালকুলেটর</span><span class="en">🔥 Calorie Yield Calculator</span></h4>
+        <p style="font-size:0.75rem; opacity:0.8;">
+          <span class="bn">গ্রাম প্রতি লিপিড ৯ কিলোকেলরি, এবং শর্করা ও প্রোটিন ৪ কিলোকেলরি শক্তি দেয়। পরিমাণ বসিয়ে ক্যালোরি নির্ণয় করুন:</span>
+          <span class="en">Lipids yield 9 kcal/g, while Carbs and Proteins yield 4 kcal/g. Input grams to calculate energy:</span>
+        </p>
+        <div style="display:flex; gap:8px;">
+          <div><label style="font-size:0.6rem;">Carbs (g)</label><input type="number" class="form-input" id="carbInput" value="10" style="padding:4px; font-size:0.75rem; width:60px;" oninput="calcCalories()"></div>
+          <div><label style="font-size:0.6rem;">Protein (g)</label><input type="number" class="form-input" id="protInput" value="5" style="padding:4px; font-size:0.75rem; width:60px;" oninput="calcCalories()"></div>
+          <div><label style="font-size:0.6rem;">Lipid (g)</label><input type="number" class="form-input" id="lipidInput" value="2" style="padding:4px; font-size:0.75rem; width:60px;" oninput="calcCalories()"></div>
+        </div>
+        <div style="font-size:0.8rem; font-weight:bold; color:var(--cyan); margin-top:10px; text-align:center;">
+          Total: <span id="kcalResult">78</span> kcal
+        </div>
+      </div>
+    
+          </div>
+          
+          <!-- TAB 4: QUIZ -->
+          <div class="tab-content" id="tab-quiz">
+            <div class="quiz-panel" id="quizPanel">
+              <!-- Quiz rendered dynamically by JS -->
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- RIGHT PANE: ANDROID DEVICE MOCKUP -->
+      <div>
+        <div class="android-device">
+          <div class="android-status-bar"><span class="time">09:42</span><div class="icons">📶 🔋 98%</div></div>
+          <div class="android-screen">
+            <div class="app-title-bar">
+              <span class="app-logo">🍳</span>
+              <span class="app-name">
+                <span class="bn">জৈব অণু শ্রেণীকরণ</span>
+                <span class="en">Biomolecules Lab</span>
+              </span>
+            </div>
+            <div class="app-instruction">
+              <span class="bn">খাবারের চিপগুলো চেপে বা টেনে তাদের নির্দিষ্ট পুষ্টির কোঠায় (Carb, Protein, Lipid) সাজিয়ে ফেলুন।</span>
+              <span class="en">Sort food chips. Drag them to their respective classifications: Carbohydrates, Proteins, or Lipids.</span>
+            </div>
+            
+            <!-- Simulation UI Container -->
+            
+      <div class="c9-items" id="c9Items">
+        <div class="c9-chip" draggable="true" id="f1" data-cat="carb"><span class="bn">ভাত (Rice)</span><span class="en">Rice</span></div>
+        <div class="c9-chip" draggable="true" id="f2" data-cat="carb"><span class="bn">আলু (Potato)</span><span class="en">Potato</span></div>
+        <div class="c9-chip" draggable="true" id="f3" data-cat="protein"><span class="bn">মাছ (Fish)</span><span class="en">Fish</span></div>
+        <div class="c9-chip" draggable="true" id="f4" data-cat="protein"><span class="bn">ডিম (Egg)</span><span class="en">Egg</span></div>
+        <div class="c9-chip" draggable="true" id="f5" data-cat="lipid"><span class="bn">মাখন (Butter)</span><span class="en">Butter</span></div>
+        <div class="c9-chip" draggable="true" id="f6" data-cat="lipid"><span class="bn">তেল (Oil)</span><span class="en">Oil</span></div>
+      </div>
+      
+      <div class="c9-slots">
+        <div class="c9-slot" data-cat="carb">
+          <div class="c9-slot-title"><span class="bn">শর্করা (Carbs)</span><span class="en">Carbs</span></div>
+          <div class="c9-slot-chips"></div>
+        </div>
+        <div class="c9-slot" data-cat="protein">
+          <div class="c9-slot-title"><span class="bn">আমিষ (Protein)</span><span class="en">Protein</span></div>
+          <div class="c9-slot-chips"></div>
+        </div>
+        <div class="c9-slot" data-cat="lipid">
+          <div class="c9-slot-title"><span class="bn">স্নেহ (Lipid)</span><span class="en">Lipids</span></div>
+          <div class="c9-slot-chips"></div>
+        </div>
+      </div>
+      
+      <button class="p-btn" id="c9ResetBtn" style="margin-top:10px; width:100%;"><span class="bn">🔄 নতুন করে সাজান</span><span class="en">🔄 Reset Grid</span></button>
+    
+            
+          </div>
+          <div class="android-nav-bar">
+            <div class="back" onclick="history.back()"></div>
+            <div class="home" onclick="window.location.href='science.html'"></div>
+            <div class="recents"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+</div>
+
+<script src="science_common.js"></script>
+<script>
+  // Simple tab switching logic
+  function switchTab(btn, tabId) {
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById('tab-' + tabId).classList.add('active');
+    
+    // Play a click tick
+    AudioFX.init();
+  }
+</script>
+<script src="science_ch9.js"></script>
+</body>
+</html>

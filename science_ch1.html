@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="bn" class="lang-bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Force, Pressure & Energy · Class 9-10 Science Portal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@500;600&family=Tiro+Bangla&family=Hind+Siliguri:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="science_style.css">
+</head>
+<body>
+
+<div class="app-container">
+  
+  <!-- PERSISTENT SIDEBAR INJECTED VIA COMMON.JS -->
+  <div class="sidebar" id="sidebar"></div>
+
+  <!-- MAIN CHAPTER CONTENT -->
+  <main class="main-content">
+    
+    <header class="lesson-header">
+      <div class="lesson-meta">
+        <span class="subject-badge physics">Physics</span>
+        <span class="eyebrow">Chapter 01</span>
+      </div>
+      <h1>
+        <span class="bn">বল, চাপ ও শক্তি</span>
+        <span class="en">Force, Pressure & Energy</span>
+      </h1>
+    </header>
+
+    <div class="grid2">
+      <!-- LEFT PANE: LESSONS, ACTIVITIES, EXTRA EXAMPLES, AND QUIZ -->
+      <div style="display:flex; flex-direction:column; gap:20px;">
+        <div class="content-pane">
+          <div class="tab-nav">
+            <button class="tab-btn active" onclick="switchTab(this, 'lesson')">
+              <span class="bn">📖 মূল তথ্য</span><span class="en">📖 Core Info</span>
+            </button>
+            <button class="tab-btn" onclick="switchTab(this, 'activity')">
+              <span class="bn">🏫 শ্রেণিকক্ষ কার্যক্রম</span><span class="en">🏫 Activities</span>
+            </button>
+            <button class="tab-btn" onclick="switchTab(this, 'examples')">
+              <span class="bn">💡 আরও উদাহরণ</span><span class="en">💡 More Examples</span>
+            </button>
+            <button class="tab-btn" onclick="switchTab(this, 'quiz')" id="quizTabBtn">
+              <span class="bn">📝 কুইজ টেস্ট</span><span class="en">📝 Quiz Test</span>
+            </button>
+          </div>
+          
+          <!-- TAB 1: THEORY -->
+          <div class="tab-content active" id="tab-lesson">
+            <p class="lede" style="font-size:1.1rem; line-height:1.6; color:var(--cyan); margin-bottom:15px;">
+              <span class="bn">বল প্রয়োগের ফলে গতি সৃষ্টি হয়, এবং ক্ষেত্রফলের ওপর লম্বভাবে প্রযুক্ত বলকে চাপ বলে ($P = F/A$)।</span>
+              <span class="en">Applied force generates acceleration, and perpendicular force distributed over an area creates pressure ($P = F/A$).</span>
+            </p>
+            <div style="line-height:1.6; font-size:0.92rem; opacity:0.9;">
+              
+      <p class="bn"><b>১. বল (Force):</b> যা কোনো স্থির বস্তুর ওপর ক্রিয়া করে তাকে গতিশীল করতে চায় বা করে তাকে বল বলে। নিউটনের ২য় সূত্রানুযায়ী বল হলো ভর ও ত্বরণের গুণফল (\\(F = ma\\()।</p>
+      <p class="en"><b>1. Force (Force):</b> An interaction that changes the motion of an object. Formulated by Newton's second law (\\(F = ma\\().</p>
+      <p class="bn"><b>২. চাপ (Pressure):</b> একক ক্ষেত্রফলের ওপর লম্বভাবে প্রযুক্ত বল। সমীকরণ: \\(P = F/A\\(। এর একক পাস্কাল (\\(1\text{ Pa} = 1\text{ N/m}^2\\()। নির্দিষ্ট বলের জন্য ক্ষেত্রফল হ্রাস পেলে চাপ বৃদ্ধি পায়।</p>
+      <p class="en"><b>2. Pressure (Pressure):</b> Perpendicular force acting per unit area. Formula: \\(P = F/A\\(. Measured in Pascals (\\(1\text{ Pa} = 1\text{ N/m}^2\\(). Smaller area increases pressure for a constant force.</p>
+    
+            </div>
+          </div>
+          
+          <!-- TAB 2: ACTIVITIES -->
+          <div class="tab-content" id="tab-activity">
+            <ul class="activity-list">
+              <li>
+                <span class="activity-tag">OUTCOME</span>
+                <strong><span class="bn">শিখনফল:</span><span class="en">Learning Outcome:</span></strong><br>
+                <span class="bn">চাপের সমীকরণ $P = F/A$ গাণিতিকভাবে বুঝতে পারা।</span>
+                <span class="en">Mathematically interpret the pressure equation $P = F/A$.</span>
+              </li>
+              <li>
+                <span class="activity-tag" style="background:rgba(95,224,224,0.15); color:var(--cyan);">ACTIVITY</span>
+                <strong><span class="bn">কার্যক্রম:</span><span class="en">Class Activity:</span></strong><br>
+                <span class="bn">ক্ষেত্রফল ও বল পরিবর্তন করে কুশনের বিকৃতি পর্যবেক্ষণ করুন।</span>
+                <span class="en">Vary area and force parameters to observe cushion deformation limits.</span>
+              </li>
+            </ul>
+          </div>
+          
+          <!-- TAB 3: EXTRA EXAMPLES / CALCULATORS -->
+          <div class="tab-content" id="tab-examples">
+            
+      <div style="background:rgba(255,255,255,0.03); border:1px solid var(--line); padding:15px; border-radius:8px;">
+        <h4 style="margin-top:0; color:var(--chalk-yellow);"><span class="bn">🎒 স্কুল ব্যাগ বেল্ট ক্যালকুলেটর</span><span class="en">🎒 School Bag Strap Calculator</span></h4>
+        <p style="font-size:0.75rem; opacity:0.8;">
+          <span class="bn">মোটা বেল্ট বনাম চিকন বেল্টের কাঁধে চাপ তুলনা করুন। ধরুন ব্যাগের ওজন ৫০ নিউটন (৫ কেজি)।</span>
+          <span class="en">Compare pressure on shoulder for thin vs wide straps. Assume a 50N (5kg) bag weight.</span>
+        </p>
+        <div class="p-slider-row">
+          <label><span>STRAP WIDTH (cm)</span><b id="strapWidthVal">2 cm</b></label>
+          <input type="range" class="p-slider" id="strapWidthSlider" min="2" max="10" value="2" oninput="updateStrapCalc()">
+        </div>
+        <div style="font-size:0.8rem; font-weight:bold; color:var(--cyan); margin-top:8px;">
+          <span class="bn"> কাঁধে প্রযুক্ত চাপ: </span><span class="en">Shoulder Pressure: </span><span id="strapPresVal">25000</span> Pa
+        </div>
+      </div>
+      
+      <div style="background:rgba(255,255,255,0.03); border:1px solid var(--line); padding:15px; border-radius:8px; margin-top:15px;">
+        <h4 style="margin-top:0; color:var(--chalk-coral);"><span class="bn">📌 সুই বনাম ভোঁতা পেরেক</span><span class="en">📌 Needle vs Blunt Nail</span></h4>
+        <p style="font-size:0.75rem; opacity:0.8;">
+          <span class="bn">সুইয়ের মাথা খুব সূক্ষ্ম হওয়ায় অতি সামান্য বল প্রয়োগেই বিপুল চাপ সৃষ্টি হয়ে কাপড়ে ঢুকে যায়।</span>
+          <span class="en">A needle tip has a minute contact area, generating huge pressure with tiny force to pierce cloth easily.</span>
+        </p>
+        <div style="font-size:0.8rem;">
+          <div>📍 <span class="bn">সুইয়ের চাপ (বল = ১০N, ক্ষেত্রফল = ০.০১ mm²): </span><span class="en">Needle pressure (Force = 10N, Area = 0.01 mm²): </span> <b>1,000 MPa</b></div>
+          <div style="margin-top:4px;">🔨 <span class="bn">পেরেকের চাপ (বল = ১০N, ক্ষেত্রফল = ২.০ mm²): </span><span class="en">Nail pressure (Force = 10N, Area = 2.0 mm²): </span> <b>5 MPa</b></div>
+        </div>
+      </div>
+    
+          </div>
+          
+          <!-- TAB 4: QUIZ -->
+          <div class="tab-content" id="tab-quiz">
+            <div class="quiz-panel" id="quizPanel">
+              <!-- Quiz rendered dynamically by JS -->
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- RIGHT PANE: ANDROID DEVICE MOCKUP -->
+      <div>
+        <div class="android-device">
+          <div class="android-status-bar"><span class="time">09:42</span><div class="icons">📶 🔋 98%</div></div>
+          <div class="android-screen">
+            <div class="app-title-bar">
+              <span class="app-logo">🎯</span>
+              <span class="app-name">
+                <span class="bn">চাপ ল্যাব</span>
+                <span class="en">Pressure Simulator</span>
+              </span>
+            </div>
+            <div class="app-instruction">
+              <span class="bn">বল (Force) বৃদ্ধি করুন এবং ক্ষেত্রফল (Area) কমান। চাপ অতিরিক্ত বেড়ে ১৫ পাস্কাল ছাড়ালে কুশনটি ফেটে যাবে।</span>
+              <span class="en">Increase Force and reduce Area. Pressures above 15 Pa will make the cushion crack.</span>
+            </div>
+            
+            <!-- Simulation UI Container -->
+            
+      <div class="c1-chamber">
+        <div class="c1-piston" id="c1Piston">F = 10 N</div>
+        <div class="c1-cushion" id="c1Cushion"></div>
+      </div>
+      <div class="gauge-wrap" style="margin-top:15px;">
+        <div><span class="bn">চাপ (Pressure): </span><span class="en">Pressure: </span><b id="c1Val">1.0 Pa</b></div>
+        <div class="gauge-bar-track"><div class="gauge-bar-fill" id="c1Bar"></div></div>
+      </div>
+      <div style="margin-top:15px;">
+        <div class="p-slider-row">
+          <label><span>FORCE (N)</span><b id="c1ForceVal">10 N</b></label>
+          <input type="range" class="p-slider" id="c1Force" min="5" max="100" value="10">
+        </div>
+        <div class="p-slider-row">
+          <label><span>AREA (m²)</span><b id="c1AreaVal">10 m²</b></label>
+          <input type="range" class="p-slider" id="c1Area" min="2" max="25" value="10">
+        </div>
+      </div>
+    
+            
+          </div>
+          <div class="android-nav-bar">
+            <div class="back" onclick="history.back()"></div>
+            <div class="home" onclick="window.location.href='science.html'"></div>
+            <div class="recents"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+</div>
+
+<script src="science_common.js"></script>
+<script>
+  // Simple tab switching logic
+  function switchTab(btn, tabId) {
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById('tab-' + tabId).classList.add('active');
+    
+    // Play a click tick
+    AudioFX.init();
+  }
+</script>
+<script src="science_ch1.js"></script>
+</body>
+</html>

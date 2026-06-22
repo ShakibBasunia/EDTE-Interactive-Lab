@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="bn" class="lang-bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modern Physics · Class 9-10 Science Portal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@500;600&family=Tiro+Bangla&family=Hind+Siliguri:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="science_style.css">
+</head>
+<body>
+
+<div class="app-container">
+  
+  <!-- PERSISTENT SIDEBAR INJECTED VIA COMMON.JS -->
+  <div class="sidebar" id="sidebar"></div>
+
+  <!-- MAIN CHAPTER CONTENT -->
+  <main class="main-content">
+    
+    <header class="lesson-header">
+      <div class="lesson-meta">
+        <span class="subject-badge physics">Physics</span>
+        <span class="eyebrow">Chapter 03</span>
+      </div>
+      <h1>
+        <span class="bn">আধুনিক পদার্থবিজ্ঞান</span>
+        <span class="en">Modern Physics</span>
+      </h1>
+    </header>
+
+    <div class="grid2">
+      <!-- LEFT PANE: LESSONS, ACTIVITIES, EXTRA EXAMPLES, AND QUIZ -->
+      <div style="display:flex; flex-direction:column; gap:20px;">
+        <div class="content-pane">
+          <div class="tab-nav">
+            <button class="tab-btn active" onclick="switchTab(this, 'lesson')">
+              <span class="bn">📖 মূল তথ্য</span><span class="en">📖 Core Info</span>
+            </button>
+            <button class="tab-btn" onclick="switchTab(this, 'activity')">
+              <span class="bn">🏫 শ্রেণিকক্ষ কার্যক্রম</span><span class="en">🏫 Activities</span>
+            </button>
+            <button class="tab-btn" onclick="switchTab(this, 'examples')">
+              <span class="bn">💡 আরও উদাহরণ</span><span class="en">💡 More Examples</span>
+            </button>
+            <button class="tab-btn" onclick="switchTab(this, 'quiz')" id="quizTabBtn">
+              <span class="bn">📝 কুইজ টেস্ট</span><span class="en">📝 Quiz Test</span>
+            </button>
+          </div>
+          
+          <!-- TAB 1: THEORY -->
+          <div class="tab-content active" id="tab-lesson">
+            <p class="lede" style="font-size:1.1rem; line-height:1.6; color:var(--cyan); margin-bottom:15px;">
+              <span class="bn">কোয়ান্টাম আলোককণা (ফোটন) ধাতু পাতে আঘাত করলে ফোটোতড়িৎ ক্রিয়ার ফলে ইলেকট্রন নির্গত হয়।</span>
+              <span class="en">When light quanta (photons) strike a metal plate, photoelectrons are emitted via the photoelectric effect.</span>
+            </p>
+            <div style="line-height:1.6; font-size:0.92rem; opacity:0.9;">
+              
+      <p class="bn"><b>১. ফোটোতড়িৎ ক্রিয়া (Photoelectric Effect):</b> উপযুক্ত কম্পাঙ্কের আলোক ফোটন কোনো ধাতব পৃষ্ঠে আপতিত হলে ধাতব পৃষ্ঠ থেকে ইলেকট্রন নির্গত হওয়ার ঘটনাকে ফোটোতড়িৎ ক্রিয়া বলে। আলবার্ট আইনস্টাইন এটি ব্যাখ্যা করে ১৯২১ সালে নোবেল পুরস্কার লাভ করেন।</p>
+      <p class="en"><b>1. Photoelectric Effect:</b> Emission of electrons when light shines on a metal. Explained by Albert Einstein (Nobel Prize 1921).</p>
+      <p class="bn"><b>২. শক্তির কোয়ান্টাম রূপ:</b> আলোর প্রতিটি কণার শক্তি \\(E = h\nu = hc/\lambda\\(। এই শক্তি আপতিত হলে তা ইলেকট্রনের কার্যপেক্ষক (Work function, \\(\Phi\\() অতিক্রম করে গতিশক্তিতে রূপান্তরিত হয়: \\(E = \Phi + K_{\text{max}}\\(। কার্যপেক্ষকের চেয়ে কম শক্তির আলো পড়লে কোনো ইলেকট্রন নির্গত হয় না।</p>
+      <p class="en"><b>2. Energy Quanta:</b> Photon energy is \\(E = h\nu = hc/\lambda\\(. Photoelectric equation: \\(h\nu = \Phi + K_{\text{max}}\\(. No electrons emit below threshold energy.</p>
+    
+            </div>
+          </div>
+          
+          <!-- TAB 2: ACTIVITIES -->
+          <div class="tab-content" id="tab-activity">
+            <ul class="activity-list">
+              <li>
+                <span class="activity-tag">OUTCOME</span>
+                <strong><span class="bn">শিখনফল:</span><span class="en">Learning Outcome:</span></strong><br>
+                <span class="bn">আলোর তরঙ্গদৈর্ঘ্য স্লাইড ব্যবহার করে ফোটোতড়িৎ কার্যকারিতা ও গতিশক্তি নির্ণয় করা।</span>
+                <span class="en">Examine photoelectric thresholds and kinetic energy of photoelectron emission.</span>
+              </li>
+              <li>
+                <span class="activity-tag" style="background:rgba(95,224,224,0.15); color:var(--cyan);">ACTIVITY</span>
+                <strong><span class="bn">কার্যক্রম:</span><span class="en">Class Activity:</span></strong><br>
+                <span class="bn">তরঙ্গদৈর্ঘ্য স্লাইডার কমিয়ে নীল/অতিবেগুনী আলোর আঘাতে ইলেকট্রন প্রবাহ দেখুন।</span>
+                <span class="en">Decrease wavelength slider to shoot UV/blue photons and check electron current flow.</span>
+              </li>
+            </ul>
+          </div>
+          
+          <!-- TAB 3: EXTRA EXAMPLES / CALCULATORS -->
+          <div class="tab-content" id="tab-examples">
+            
+      <div style="background:rgba(255,255,255,0.03); border:1px solid var(--line); padding:15px; border-radius:8px;">
+        <h4 style="margin-top:0; color:var(--chalk-yellow);"><span class="bn">☀️ সোলার সেল ও ফটোমিটার ক্যালকুলেটর</span><span class="en">☀️ Solar Cell Workfunction Lab</span></h4>
+        <p style="font-size:0.75rem; opacity:0.8;">
+          <span class="bn">বিভিন্ন ধাতুর কার্যপেক্ষক (Work Function) ভিন্ন হয়। নিচে ধাতু নির্বাচন করে তার নূন্যতম তরঙ্গদৈর্ঘ্য দেখুন।</span>
+          <span class="en">Select different metals to observe their work function threshold.</span>
+        </p>
+        <div class="form-group">
+          <label><span class="bn">ধাতু নির্বাচন করুন</span><span class="en">Select Metal</span></label>
+          <select id="metalSelect" class="form-input" style="padding:4px; font-size:0.8rem;" onchange="updateMetalCalc()">
+            <option value="2.14">Cesium (সিজিয়াম) - 2.14 eV</option>
+            <option value="2.30">Potassium (পটাশিয়াম) - 2.30 eV</option>
+            <option value="2.75">Sodium (সোডিয়াম) - 2.75 eV</option>
+          </select>
+        </div>
+        <div style="font-size:0.75rem; opacity:0.9;" id="metalCalcResult">
+          Cesium Threshold: 579 nm (Orange Light)
+        </div>
+      </div>
+    
+          </div>
+          
+          <!-- TAB 4: QUIZ -->
+          <div class="tab-content" id="tab-quiz">
+            <div class="quiz-panel" id="quizPanel">
+              <!-- Quiz rendered dynamically by JS -->
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- RIGHT PANE: ANDROID DEVICE MOCKUP -->
+      <div>
+        <div class="android-device">
+          <div class="android-status-bar"><span class="time">09:42</span><div class="icons">📶 🔋 98%</div></div>
+          <div class="android-screen">
+            <div class="app-title-bar">
+              <span class="app-logo">📡</span>
+              <span class="app-name">
+                <span class="bn">ফোটোতড়িৎ গেম</span>
+                <span class="en">Photoelectric Effect</span>
+              </span>
+            </div>
+            <div class="app-instruction">
+              <span class="bn">আলোর তরঙ্গদৈর্ঘ্য (Wavelength) পরিবর্তন করুন। সবুজ-নীল আলোর নিচে ৫৩৯ ন্যানোমিটারে ইলেকট্রন ধাতব পাত থেকে বেরিয়ে যাবে।</span>
+              <span class="en">Slide wavelength. Greenish-blue light wavelengths below 539 nm will emit photoelectrons.</span>
+            </div>
+            
+            <!-- Simulation UI Container -->
+            
+      <div class="c3-chamber" id="c3Chamber">
+        <div class="c3-lightray" id="c3Ray"></div>
+        <div class="c3-anode"></div>
+        <div class="c3-plate"></div>
+      </div>
+      <div style="margin-top:12px;">
+        <div class="p-slider-row">
+          <label><span>WAVELENGTH (nm)</span><b id="c3WavelengthText">650 nm</b></label>
+          <input type="range" class="p-slider" id="c3Wave" min="350" max="750" value="650">
+        </div>
+      </div>
+      <div class="gauge-wrap" style="font-size:0.7rem; display:flex; justify-content:space-between;">
+        <span>🔋 <span class="bn">তড়িৎ প্রবাহ: </span><span class="en">Current: </span><b id="c3Current">0.0 mA</b></span>
+        <span>💥 <span class="bn">ফোটন শক্তি: </span><span class="en">Photon E: </span><b id="c3Energy">1.9 eV</b></span>
+      </div>
+    
+            
+          </div>
+          <div class="android-nav-bar">
+            <div class="back" onclick="history.back()"></div>
+            <div class="home" onclick="window.location.href='science.html'"></div>
+            <div class="recents"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+</div>
+
+<script src="science_common.js"></script>
+<script>
+  // Simple tab switching logic
+  function switchTab(btn, tabId) {
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById('tab-' + tabId).classList.add('active');
+    
+    // Play a click tick
+    AudioFX.init();
+  }
+</script>
+<script src="science_ch3.js"></script>
+</body>
+</html>

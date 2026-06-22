@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="bn" class="lang-bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Human Organ Systems · Class 9-10 Science Portal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@500;600&family=Tiro+Bangla&family=Hind+Siliguri:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="science_style.css">
+</head>
+<body>
+
+<div class="app-container">
+  
+  <!-- PERSISTENT SIDEBAR INJECTED VIA COMMON.JS -->
+  <div class="sidebar" id="sidebar"></div>
+
+  <!-- MAIN CHAPTER CONTENT -->
+  <main class="main-content">
+    
+    <header class="lesson-header">
+      <div class="lesson-meta">
+        <span class="subject-badge biology">Biology</span>
+        <span class="eyebrow">Chapter 11</span>
+      </div>
+      <h1>
+        <span class="bn">মানব শরীরের তন্ত্র</span>
+        <span class="en">Human Organ Systems</span>
+      </h1>
+    </header>
+
+    <div class="grid2">
+      <!-- LEFT PANE: LESSONS, ACTIVITIES, EXTRA EXAMPLES, AND QUIZ -->
+      <div style="display:flex; flex-direction:column; gap:20px;">
+        <div class="content-pane">
+          <div class="tab-nav">
+            <button class="tab-btn active" onclick="switchTab(this, 'lesson')">
+              <span class="bn">📖 মূল তথ্য</span><span class="en">📖 Core Info</span>
+            </button>
+            <button class="tab-btn" onclick="switchTab(this, 'activity')">
+              <span class="bn">🏫 শ্রেণিকক্ষ কার্যক্রম</span><span class="en">🏫 Activities</span>
+            </button>
+            <button class="tab-btn" onclick="switchTab(this, 'examples')">
+              <span class="bn">💡 আরও উদাহরণ</span><span class="en">💡 More Examples</span>
+            </button>
+            <button class="tab-btn" onclick="switchTab(this, 'quiz')" id="quizTabBtn">
+              <span class="bn">📝 কুইজ টেস্ট</span><span class="en">📝 Quiz Test</span>
+            </button>
+          </div>
+          
+          <!-- TAB 1: THEORY -->
+          <div class="tab-content active" id="tab-lesson">
+            <p class="lede" style="font-size:1.1rem; line-height:1.6; color:var(--cyan); margin-bottom:15px;">
+              <span class="bn">রক্ত সংবহন তন্ত্র হৃদপিণ্ড ও ধমনীর মাধ্যমে সারা শরীরে পুষ্টি ও অক্সিজেন পৌঁছে দেয়।</span>
+              <span class="en">The cardiovascular system pumps oxygen and vital nutrients to body tissues via arterial loops.</span>
+            </p>
+            <div style="line-height:1.6; font-size:0.92rem; opacity:0.9;">
+              
+      <p class="bn"><b>১. রক্ত সংবহন তন্ত্র (Circulatory System):</b> হৃদপিণ্ড, ধমনী, শিরা ও রক্তজালক নিয়ে গঠিত। মানুষের হৃদপিণ্ড চার প্রকোষ্ঠ বিশিষ্ট (দুটি অলিন্দ ও দুটি নিলয়)। এটি অক্সিজেনযুক্ত রক্ত সারা শরীরে পাঠায় এবং ডিঅক্সিজেনযুক্ত রক্ত পুনরায় ফুসফুসে অক্সিজেন গ্রহণের জন্য পাম্প করে।</p>
+      <p class="en"><b>1. Circulatory System:</b> Consists of heart, blood vessels, and blood. The human heart has 4 chambers. Pumps oxygenated blood to organs and deoxygenated blood to lungs.</p>
+      <p class="bn"><b>২. হৃদস্পন্দন ও রক্তচাপ:</b> হৃদপিণ্ডের সংকোচনকে সিস্টোল (Systole) এবং প্রসারণকে ডায়াস্টোল (Diastole) বলে। প্রতি মিনিটে স্বাভাবিক হৃদস্পন্দন ৭০-৮০ বার (BPM)। স্বাভাবিক রক্তচাপ ১২০/৮০ mmHg।</p>
+      <p class="en"><b>2. Blood Pressure:</b> Systolic (contraction, ~120 mmHg) vs Diastolic (relaxation, ~80 mmHg).</p>
+    
+            </div>
+          </div>
+          
+          <!-- TAB 2: ACTIVITIES -->
+          <div class="tab-content" id="tab-activity">
+            <ul class="activity-list">
+              <li>
+                <span class="activity-tag">OUTCOME</span>
+                <strong><span class="bn">শিখনফল:</span><span class="en">Learning Outcome:</span></strong><br>
+                <span class="bn">হৃদস্পন্দন পরিমাপ করে কার্ডিওভাসকুলার স্বাস্থ্যের অবস্থা ব্যাখ্যা করা।</span>
+                <span class="en">Understand heart rate (BPM) variables and trace circulatory flow patterns.</span>
+              </li>
+              <li>
+                <span class="activity-tag" style="background:rgba(95,224,224,0.15); color:var(--cyan);">ACTIVITY</span>
+                <strong><span class="bn">কার্যক্রম:</span><span class="en">Class Activity:</span></strong><br>
+                <span class="bn">নির্ধারিত প্যাডে বারবার ক্লিক করে আপনার ট্যাপের গড় হৃদস্পন্দন (BPM) হিসাব করুন।</span>
+                <span class="en">Tap the pad repeatedly to calculate beats per minute (BPM) in real-time.</span>
+              </li>
+            </ul>
+          </div>
+          
+          <!-- TAB 3: EXTRA EXAMPLES / CALCULATORS -->
+          <div class="tab-content" id="tab-examples">
+            
+      <div style="background:rgba(255,255,255,0.03); border:1px solid var(--line); padding:15px; border-radius:8px;">
+        <h4 style="margin-top:0; color:var(--chalk-yellow);"><span class="bn">🩺 রক্তচাপ (Blood Pressure) ইন্ডিকেটর</span><span class="en">🩺 Blood Pressure Indicator</span></h4>
+        <p style="font-size:0.75rem; opacity:0.8;">
+          <span class="bn">রক্তচাপ স্বাভাবিক সীমার মধ্যে থাকা হার্টের সুস্বাস্থ্যের জন্য প্রয়োজনীয়। পাম্প করুন ও রিডিং দেখুন:</span>
+          <span class="en">Pump the bulb to measure blood pressure and check health classifications:</span>
+        </p>
+        <button class="p-btn" onclick="pumpBP()" style="width:100%;">Pump Blood Pressure</button>
+        <div style="font-size:0.8rem; font-weight:bold; color:var(--cyan); margin-top:8px; text-align:center;" id="bpResult">
+          Normal: 120/80 mmHg
+        </div>
+      </div>
+    
+          </div>
+          
+          <!-- TAB 4: QUIZ -->
+          <div class="tab-content" id="tab-quiz">
+            <div class="quiz-panel" id="quizPanel">
+              <!-- Quiz rendered dynamically by JS -->
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- RIGHT PANE: ANDROID DEVICE MOCKUP -->
+      <div>
+        <div class="android-device">
+          <div class="android-status-bar"><span class="time">09:42</span><div class="icons">📶 🔋 98%</div></div>
+          <div class="android-screen">
+            <div class="app-title-bar">
+              <span class="app-logo">❤️</span>
+              <span class="app-name">
+                <span class="bn">হৃদস্পন্দন মনিটর</span>
+                <span class="en">Pulse Monitor</span>
+              </span>
+            </div>
+            <div class="app-instruction">
+              <span class="bn">নিচের হার্ট আইকনের ওপর বারবার ট্যাপ করুন। এটি আপনার ট্যাপ করার হারের ওপর ভিত্তি করে BPM হিসাব করবে।</span>
+              <span class="en">Tap the heart icon repeatedly. The simulator measures tapping intervals and outputs beats per minute (BPM).</span>
+            </div>
+            
+            <!-- Simulation UI Container -->
+            
+      <div class="c11-pulse-pad" id="c11Pad">
+        <div class="c11-heart" id="c11Heart">❤️</div>
+        <div style="font-size:0.75rem; opacity:0.8;">TAP PULSE HERE</div>
+      </div>
+      <div class="gauge-wrap" style="margin-top:12px; text-align:center;">
+        <div><b>Heart Rate:</b> <span id="c11BPM">--</span> BPM</div>
+        <div style="font-size:0.65rem; opacity:0.75; margin-top:3px;" id="c11Status">Status: Awaiting Tap</div>
+      </div>
+    
+            
+          </div>
+          <div class="android-nav-bar">
+            <div class="back" onclick="history.back()"></div>
+            <div class="home" onclick="window.location.href='science.html'"></div>
+            <div class="recents"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+</div>
+
+<script src="science_common.js"></script>
+<script>
+  // Simple tab switching logic
+  function switchTab(btn, tabId) {
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById('tab-' + tabId).classList.add('active');
+    
+    // Play a click tick
+    AudioFX.init();
+  }
+</script>
+<script src="science_ch11.js"></script>
+</body>
+</html>

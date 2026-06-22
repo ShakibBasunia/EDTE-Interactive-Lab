@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="bn" class="lang-bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Photosynthesis · Class 9-10 Science Portal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@500;600&family=Tiro+Bangla&family=Hind+Siliguri:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="science_style.css">
+</head>
+<body>
+
+<div class="app-container">
+  
+  <!-- PERSISTENT SIDEBAR INJECTED VIA COMMON.JS -->
+  <div class="sidebar" id="sidebar"></div>
+
+  <!-- MAIN CHAPTER CONTENT -->
+  <main class="main-content">
+    
+    <header class="lesson-header">
+      <div class="lesson-meta">
+        <span class="subject-badge biology">Biology</span>
+        <span class="eyebrow">Chapter 10</span>
+      </div>
+      <h1>
+        <span class="bn">সালোকসংশ্লেষণ</span>
+        <span class="en">Photosynthesis</span>
+      </h1>
+    </header>
+
+    <div class="grid2">
+      <!-- LEFT PANE: LESSONS, ACTIVITIES, EXTRA EXAMPLES, AND QUIZ -->
+      <div style="display:flex; flex-direction:column; gap:20px;">
+        <div class="content-pane">
+          <div class="tab-nav">
+            <button class="tab-btn active" onclick="switchTab(this, 'lesson')">
+              <span class="bn">📖 মূল তথ্য</span><span class="en">📖 Core Info</span>
+            </button>
+            <button class="tab-btn" onclick="switchTab(this, 'activity')">
+              <span class="bn">🏫 শ্রেণিকক্ষ কার্যক্রম</span><span class="en">🏫 Activities</span>
+            </button>
+            <button class="tab-btn" onclick="switchTab(this, 'examples')">
+              <span class="bn">💡 আরও উদাহরণ</span><span class="en">💡 More Examples</span>
+            </button>
+            <button class="tab-btn" onclick="switchTab(this, 'quiz')" id="quizTabBtn">
+              <span class="bn">📝 কুইজ টেস্ট</span><span class="en">📝 Quiz Test</span>
+            </button>
+          </div>
+          
+          <!-- TAB 1: THEORY -->
+          <div class="tab-content active" id="tab-lesson">
+            <p class="lede" style="font-size:1.1rem; line-height:1.6; color:var(--cyan); margin-bottom:15px;">
+              <span class="bn">উদ্ভিদ ক্লোরোফিলের সাহায্যে সৌরশক্তিকে রাসায়নিক শক্তিতে রূপান্তরিত করে গ্লুকোজ ও অক্সিজেন তৈরি করে।</span>
+              <span class="en">Plants convert solar energy into chemical energy using chlorophyll, producing glucose and oxygen.</span>
+            </p>
+            <div style="line-height:1.6; font-size:0.92rem; opacity:0.9;">
+              
+      <p class="bn"><b>১. সালোকসংশ্লেষণ বিক্রিয়া:</b> পাতার ক্লোরোপ্লাস্টে জল, কার্বন ডাই অক্সাইড ও আলোক ফোটন বিক্রিয়া করে গ্লুকোজ ও অক্সিজেন তৈরি করে। রাসায়নিক সমীকরণ: \\(6\text{CO}_2 + 6\text{H}_2\text{O} + \text{Light} \rightarrow \text{C}_6\text{H}_{12}\text{O}_6 + 6\text{O}_2\\(।</p>
+      <p class="en"><b>1. Synthesis Reaction:</b> Chloroplasts utilize water, carbon dioxide, and photons to synthesize glucose and oxygen: \\(6\text{CO}_2 + 6\text{H}_2\text{O} + \text{Light} \rightarrow \text{C}_6\text{H}_{12}\text{O}_6 + 6\text{O}_2\\(.</p>
+      <p class="bn"><b>২. প্রভাবকসমূহ:</b> আলোর তীব্রতা ও কার্বন ডাই অক্সাইডের ঘনত্ব বাড়লে সালোকসংশ্লেষণের হার বৃদ্ধি পায়। লাল ও নীল আলোতে সালোকসংশ্লেষণ সবচেয়ে ভালো হয়, কারণ ক্লোরোফিল সবুজ আলো প্রতিফলিত করে দেয়।</p>
+      <p class="en"><b>2. Limiting Factors:</b> Carbon dioxide density and light intensity regulate production rates. Red and blue spectrums yield maximum absorption.</p>
+    
+            </div>
+          </div>
+          
+          <!-- TAB 2: ACTIVITIES -->
+          <div class="tab-content" id="tab-activity">
+            <ul class="activity-list">
+              <li>
+                <span class="activity-tag">OUTCOME</span>
+                <strong><span class="bn">শিখনফল:</span><span class="en">Learning Outcome:</span></strong><br>
+                <span class="bn">আলো ও কার্বন ডাই অক্সাইডের প্রভাব পর্যবেক্ষণ করে সালোকসংশ্লেষণের হার মূল্যায়ন করা।</span>
+                <span class="en">Assess photosynthesis rates under varying light and $CO_2$ conditions.</span>
+              </li>
+              <li>
+                <span class="activity-tag" style="background:rgba(95,224,224,0.15); color:var(--cyan);">ACTIVITY</span>
+                <strong><span class="bn">কার্যক্রম:</span><span class="en">Class Activity:</span></strong><br>
+                <span class="bn">স্লাইডারগুলো বাড়িয়ে অক্সিজেন বুদবুদ এবং গ্লুকোজ প্রবাহ বৃদ্ধি দেখুন।</span>
+                <span class="en">Increase reactant sliders to speed up oxygen bubbles and molecular outputs.</span>
+              </li>
+            </ul>
+          </div>
+          
+          <!-- TAB 3: EXTRA EXAMPLES / CALCULATORS -->
+          <div class="tab-content" id="tab-examples">
+            
+      <div style="background:rgba(255,255,255,0.03); border:1px solid var(--line); padding:15px; border-radius:8px;">
+        <h4 style="margin-top:0; color:var(--chalk-yellow);"><span class="bn">🌈 আলোক বর্ণালী ও সালোকসংশ্লেষণ</span><span class="en">🌈 Light Spectrum Selector</span></h4>
+        <p style="font-size:0.75rem; opacity:0.8;">
+          <span class="bn">ক্লোরোফিল সবুজ আলো প্রতিফলিত করে বলে পাতা সবুজ দেখায়। বর্ণালী পরিবর্তন করে উৎপাদনশীলতা দেখুন:</span>
+          <span class="en">Chlorophyll reflects green light. Change light spectrum and compare output yields:</span>
+        </p>
+        <div style="display:flex; justify-content:space-around;">
+          <button class="p-btn" onclick="setSpectrum('red')" style="background:#c0392b;">Red Light</button>
+          <button class="p-btn" onclick="setSpectrum('green')" style="background:#27ae60;">Green Light</button>
+          <button class="p-btn" onclick="setSpectrum('blue')" style="background:#2980b9;">Blue Light</button>
+        </div>
+        <div style="font-size:0.8rem; font-weight:bold; color:var(--cyan); margin-top:8px; text-align:center;" id="spectrumResult">
+          Select spectrum to test.
+        </div>
+      </div>
+    
+          </div>
+          
+          <!-- TAB 4: QUIZ -->
+          <div class="tab-content" id="tab-quiz">
+            <div class="quiz-panel" id="quizPanel">
+              <!-- Quiz rendered dynamically by JS -->
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- RIGHT PANE: ANDROID DEVICE MOCKUP -->
+      <div>
+        <div class="android-device">
+          <div class="android-status-bar"><span class="time">09:42</span><div class="icons">📶 🔋 98%</div></div>
+          <div class="android-screen">
+            <div class="app-title-bar">
+              <span class="app-logo">🍃</span>
+              <span class="app-name">
+                <span class="bn">সালোকসংশ্লেষণ ল্যাব</span>
+                <span class="en">Leaf Reactor</span>
+              </span>
+            </div>
+            <div class="app-instruction">
+              <span class="bn">সূর্যালোক (Light) এবং কার্বন ডাই অক্সাইড (CO₂) বৃদ্ধি করুন। উৎপন্ন অক্সিজেন ও গ্লুকোজের গতি বৃদ্ধি পাবে।</span>
+              <span class="en">Raise Light and CO₂ levels. Watch oxygen bubbles and glucose flow rates accelerate.</span>
+            </div>
+            
+            <!-- Simulation UI Container -->
+            
+      <div class="c10-leaf" id="c10Leaf">
+        <!-- Flowing molecules generated here -->
+      </div>
+      <div style="margin-top:12px;">
+        <div class="p-slider-row">
+          <label><span>SUNLIGHT INTENSITY</span><b id="c10LVal">50%</b></label>
+          <input type="range" class="p-slider" id="c10Light" min="10" max="100" value="50">
+        </div>
+        <div class="p-slider-row">
+          <label><span>CO₂ DENSITY</span><b id="c10CO2Val">50%</b></label>
+          <input type="range" class="p-slider" id="c10CO2" min="10" max="100" value="50">
+        </div>
+      </div>
+    
+            
+          </div>
+          <div class="android-nav-bar">
+            <div class="back" onclick="history.back()"></div>
+            <div class="home" onclick="window.location.href='science.html'"></div>
+            <div class="recents"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+</div>
+
+<script src="science_common.js"></script>
+<script>
+  // Simple tab switching logic
+  function switchTab(btn, tabId) {
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById('tab-' + tabId).classList.add('active');
+    
+    // Play a click tick
+    AudioFX.init();
+  }
+</script>
+<script src="science_ch10.js"></script>
+</body>
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="bn" class="lang-bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Environment & Landforms · Class 9-10 Science Portal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@500;600&family=Tiro+Bangla&family=Hind+Siliguri:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="science_style.css">
+</head>
+<body>
+
+<div class="app-container">
+  
+  <!-- PERSISTENT SIDEBAR INJECTED VIA COMMON.JS -->
+  <div class="sidebar" id="sidebar"></div>
+
+  <!-- MAIN CHAPTER CONTENT -->
+  <main class="main-content">
+    
+    <header class="lesson-header">
+      <div class="lesson-meta">
+        <span class="subject-badge earth">Earth Science</span>
+        <span class="eyebrow">Chapter 14</span>
+      </div>
+      <h1>
+        <span class="bn">পরিবেশ ও ভূমিরূপ</span>
+        <span class="en">Environment & Landforms</span>
+      </h1>
+    </header>
+
+    <div class="grid2">
+      <!-- LEFT PANE: LESSONS, ACTIVITIES, EXTRA EXAMPLES, AND QUIZ -->
+      <div style="display:flex; flex-direction:column; gap:20px;">
+        <div class="content-pane">
+          <div class="tab-nav">
+            <button class="tab-btn active" onclick="switchTab(this, 'lesson')">
+              <span class="bn">📖 মূল তথ্য</span><span class="en">📖 Core Info</span>
+            </button>
+            <button class="tab-btn" onclick="switchTab(this, 'activity')">
+              <span class="bn">🏫 শ্রেণিকক্ষ কার্যক্রম</span><span class="en">🏫 Activities</span>
+            </button>
+            <button class="tab-btn" onclick="switchTab(this, 'examples')">
+              <span class="bn">💡 আরও উদাহরণ</span><span class="en">💡 More Examples</span>
+            </button>
+            <button class="tab-btn" onclick="switchTab(this, 'quiz')" id="quizTabBtn">
+              <span class="bn">📝 কুইজ টেস্ট</span><span class="en">📝 Quiz Test</span>
+            </button>
+          </div>
+          
+          <!-- TAB 1: THEORY -->
+          <div class="tab-content active" id="tab-lesson">
+            <p class="lede" style="font-size:1.1rem; line-height:1.6; color:var(--cyan); margin-bottom:15px;">
+              <span class="bn">উদ্ভিদের শিকড় মাটিকে আঁকড়ে ধরে রাখে যা নদী ভাঙন এবং ভূমিক্ষয় প্রতিরোধে সাহায্য করে।</span>
+              <span class="en">Vegetative root networks bind soil particles, protecting topographies from erosion.</span>
+            </p>
+            <div style="line-height:1.6; font-size:0.92rem; opacity:0.9;">
+              
+      <p class="bn"><b>১. ভূমিক্ষয় (Soil Erosion):</b> প্রাকৃতিক কারণে (যেমন বৃষ্টি, বায়ুপ্রবাহ) অথবা মানুষের কর্মকাণ্ডে (যেমন গাছ কাটা) মাটির উপরিভাগের উর্বর অংশ স্থানান্তরিত হওয়াকে ভূমিক্ষয় বলে। ভূমিক্ষয়ের ফলে জমির উর্বরতা নষ্ট হয় ও নদী ভরাট হয়ে বন্যা দেখা দেয়।</p>
+      <p class="en"><b>1. Soil weathering:</b> Movement of fertile topsoil by wind, rain, or deforestation. Leads to siltation, loss of agriculture, and flooding.</p>
+      <p class="bn"><b>২. বনায়ন ও মাটি সংরক্ষণ:</b> উদ্ভিদের শিকড় মাটিকে শক্ত করে ধরে রাখে। গাছের ক্যানোপি সরাসরি বৃষ্টির ফোঁটার আঘাত থেকে মাটিকে রক্ষা করে, ফলে পানি সহজে চুয়ে ভূগর্ভে প্রবেশ করে কিন্তু মাটি ধুয়ে চলে যায় না।</p>
+      <p class="en"><b>2. Afforestation:</b> Roots bind soil aggregates; forest canopies soften rain impact, reducing surface runoff and weathering.</p>
+    
+            </div>
+          </div>
+          
+          <!-- TAB 2: ACTIVITIES -->
+          <div class="tab-content" id="tab-activity">
+            <ul class="activity-list">
+              <li>
+                <span class="activity-tag">OUTCOME</span>
+                <strong><span class="bn">শিখনফল:</span><span class="en">Learning Outcome:</span></strong><br>
+                <span class="bn">ভূমির ঢাল ও উদ্ভিদের শিকড় দ্বারা ভূমিক্ষয় প্রতিরোধের গুরুত্ব উপলব্ধি করা।</span>
+                <span class="en">Deduce role of vegetative covers in topological stabilization.</span>
+              </li>
+              <li>
+                <span class="activity-tag" style="background:rgba(95,224,224,0.15); color:var(--cyan);">ACTIVITY</span>
+                <strong><span class="bn">কার্যক্রম:</span><span class="en">Class Activity:</span></strong><br>
+                <span class="bn">বৃষ্টি শুরু করে গাছপালা সম্বলিত এবং অনাবৃত মাটির ক্ষয়ের হার তুলনা করুন।</span>
+                <span class="en">Trigger precipitation and contrast soil erosion on barren vs forested paths.</span>
+              </li>
+            </ul>
+          </div>
+          
+          <!-- TAB 3: EXTRA EXAMPLES / CALCULATORS -->
+          <div class="tab-content" id="tab-examples">
+            
+      <div style="background:rgba(255,255,255,0.03); border:1px solid var(--line); padding:15px; border-radius:8px;">
+        <h4 style="margin-top:0; color:var(--chalk-yellow);"><span class="bn">🔄 শিলা চক্র (Rock Cycle) ভিউয়ার</span><span class="en">🔄 Rock Cycle Visualizer</span></h4>
+        <p style="font-size:0.75rem; opacity:0.8;">
+          <span class="bn">শিলা তার রূপ পরিবর্তন করে আগ্নেয়, পাললিক ও রূপান্তরিত শিলা তৈরি করে। রূপান্তর ট্রিগার করুন:</span>
+          <span class="en">Rocks undergo constant transformations. Trigger phase:</span>
+        </p>
+        <div style="display:flex; flex-wrap:wrap; gap:5px;">
+          <button class="p-btn" onclick="transformRock('magma')">Cool Magma</button>
+          <button class="p-btn" onclick="transformRock('pressure')">Apply Heat/Pressure</button>
+        </div>
+        <div style="font-size:0.75rem; text-align:center; margin-top:8px; color:var(--cyan);" id="rockResult">
+          Current Rock: Sedimentary
+        </div>
+      </div>
+    
+          </div>
+          
+          <!-- TAB 4: QUIZ -->
+          <div class="tab-content" id="tab-quiz">
+            <div class="quiz-panel" id="quizPanel">
+              <!-- Quiz rendered dynamically by JS -->
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- RIGHT PANE: ANDROID DEVICE MOCKUP -->
+      <div>
+        <div class="android-device">
+          <div class="android-status-bar"><span class="time">09:42</span><div class="icons">📶 🔋 98%</div></div>
+          <div class="android-screen">
+            <div class="app-title-bar">
+              <span class="app-logo">🌧️</span>
+              <span class="app-name">
+                <span class="bn">ভূমিরূপ ও বৃষ্টি</span>
+                <span class="en">Erosion Simulator</span>
+              </span>
+            </div>
+            <div class="app-instruction">
+              <span class="bn">বৃষ্টি শুরু করুন (Start Rain)। গাছপালা ছাড়া মাটিতে দ্রুত ক্ষয় ঘটবে ও মাটি কমে যাবে, বনায়ন করা মাটি অক্ষত থাকবে।</span>
+              <span class="en">Click Start Rain. Rain washes barren soil down to 0% volume, while roots stabilize the forest soil.</span>
+            </div>
+            
+            <!-- Simulation UI Container -->
+            
+      <div class="c14-stage">
+        <div class="c14-side" id="c14Left">
+          <div class="c14-title">FORESTED</div>
+          <div class="c14-veg">🌳</div>
+          <div class="c14-soil" id="c14SoilL"></div>
+        </div>
+        <div class="c14-side" id="c14Right">
+          <div class="c14-title">BARREN</div>
+          <div class="c14-veg" style="transform: scale(0);">🌳</div>
+          <div class="c14-soil" id="c14SoilR"></div>
+        </div>
+      </div>
+      <div style="margin-top:10px; font-size:0.62rem; display:flex; justify-content:space-between; padding:0 5px;">
+        <span>L Soil: <b id="soilLText">100%</b></span>
+        <span>R Soil: <b id="soilRText">100%</b></span>
+      </div>
+      <button class="p-btn p-btn-accent" id="c14RainBtn" style="margin-top:10px; width:100%;">
+        <span class="bn">🌧️ বৃষ্টি শুরু করুন</span><span class="en">🌧️ Start Rain</span>
+      </button>
+    
+            
+          </div>
+          <div class="android-nav-bar">
+            <div class="back" onclick="history.back()"></div>
+            <div class="home" onclick="window.location.href='science.html'"></div>
+            <div class="recents"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+</div>
+
+<script src="science_common.js"></script>
+<script>
+  // Simple tab switching logic
+  function switchTab(btn, tabId) {
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById('tab-' + tabId).classList.add('active');
+    
+    // Play a click tick
+    AudioFX.init();
+  }
+</script>
+<script src="science_ch14.js"></script>
+</body>
+</html>

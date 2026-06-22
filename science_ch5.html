@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="bn" class="lang-bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Structure of Matter · Class 9-10 Science Portal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@500;600&family=Tiro+Bangla&family=Hind+Siliguri:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="science_style.css">
+</head>
+<body>
+
+<div class="app-container">
+  
+  <!-- PERSISTENT SIDEBAR INJECTED VIA COMMON.JS -->
+  <div class="sidebar" id="sidebar"></div>
+
+  <!-- MAIN CHAPTER CONTENT -->
+  <main class="main-content">
+    
+    <header class="lesson-header">
+      <div class="lesson-meta">
+        <span class="subject-badge chemistry">Chemistry</span>
+        <span class="eyebrow">Chapter 05</span>
+      </div>
+      <h1>
+        <span class="bn">পদার্থের গঠন</span>
+        <span class="en">Structure of Matter</span>
+      </h1>
+    </header>
+
+    <div class="grid2">
+      <!-- LEFT PANE: LESSONS, ACTIVITIES, EXTRA EXAMPLES, AND QUIZ -->
+      <div style="display:flex; flex-direction:column; gap:20px;">
+        <div class="content-pane">
+          <div class="tab-nav">
+            <button class="tab-btn active" onclick="switchTab(this, 'lesson')">
+              <span class="bn">📖 মূল তথ্য</span><span class="en">📖 Core Info</span>
+            </button>
+            <button class="tab-btn" onclick="switchTab(this, 'activity')">
+              <span class="bn">🏫 শ্রেণিকক্ষ কার্যক্রম</span><span class="en">🏫 Activities</span>
+            </button>
+            <button class="tab-btn" onclick="switchTab(this, 'examples')">
+              <span class="bn">💡 আরও উদাহরণ</span><span class="en">💡 More Examples</span>
+            </button>
+            <button class="tab-btn" onclick="switchTab(this, 'quiz')" id="quizTabBtn">
+              <span class="bn">📝 কুইজ টেস্ট</span><span class="en">📝 Quiz Test</span>
+            </button>
+          </div>
+          
+          <!-- TAB 1: THEORY -->
+          <div class="tab-content active" id="tab-lesson">
+            <p class="lede" style="font-size:1.1rem; line-height:1.6; color:var(--cyan); margin-bottom:15px;">
+              <span class="bn">পরমাণু প্রোটন, নিউট্রন ও ইলেকট্রন নিয়ে গঠিত এবং বোরের কক্ষপথ তত্ত্ব অনুযায়ী আবর্তিত হয়।</span>
+              <span class="en">Atoms contain protons, neutrons, and orbiting electrons following Bohr orbital principles.</span>
+            </p>
+            <div style="line-height:1.6; font-size:0.92rem; opacity:0.9;">
+              
+      <p class="bn"><b>১. পরমাণুর গঠন:</b> পরমাণুর কেন্দ্রে থাকে ধনাত্মক আধানযুক্ত নিউক্লিয়াস (প্রোটন + নিউট্রন) এবং বাইরে ঋণাত্মক আধানযুক্ত ইলেকট্রন ঘুরতে থাকে। পরমাণু সামগ্রিকভাবে চার্জ নিরপেক্ষ থাকে কারণ প্রোটন সংখ্যা = ইলেকট্রন সংখ্যা।</p>
+      <p class="en"><b>1. Atomic structure:</b> Positively charged nucleus (protons + neutrons) surrounded by orbiting electrons. Charge is neutral when protons = electrons.</p>
+      <p class="bn"><b>২. বোরের পরমাণু মডেল:</b> ইলেকট্রনগুলো যেকোনো স্থানে অবস্থান না করে সুনির্দিষ্ট বৃত্তাকার কক্ষপথে ঘোরে। ১ম কক্ষপথে (\\(n=1\\(, K শেল) সর্বোচ্চ ২টি এবং ২য় কক্ষপথে (\\(n=2\\(, L শেল) সর্বোচ্চ ৮টি ইলেকট্রন থাকতে পারে (\\(2n^2\\( সূত্র)।</p>
+      <p class="en"><b>2. Bohr Model:</b> Electrons occupy shell orbits (\\(2n^2\\(). Orbit 1 holds max 2; Orbit 2 holds max 8.</p>
+    
+            </div>
+          </div>
+          
+          <!-- TAB 2: ACTIVITIES -->
+          <div class="tab-content" id="tab-activity">
+            <ul class="activity-list">
+              <li>
+                <span class="activity-tag">OUTCOME</span>
+                <strong><span class="bn">শিখনফল:</span><span class="en">Learning Outcome:</span></strong><br>
+                <span class="bn">প্রোটন ও ইলেকট্রন সংখ্যা দ্বারা পরমাণুর ভর, আধান ও গঠন চিত্রায়িত করা।</span>
+                <span class="en">Model atomic structure, mass number, and ionic charge using subatomic particles.</span>
+              </li>
+              <li>
+                <span class="activity-tag" style="background:rgba(95,224,224,0.15); color:var(--cyan);">ACTIVITY</span>
+                <strong><span class="bn">কার্যক্রম:</span><span class="en">Class Activity:</span></strong><br>
+                <span class="bn">স্লাইডার ব্যবহার করে প্রোটন ও ইলেকট্রন বাড়িয়ে হাইড্রোজেন, হিলিয়াম বা কার্বন তৈরি করুন।</span>
+                <span class="en">Use particle sliders to construct Hydrogen, Helium, or Carbon elements.</span>
+              </li>
+            </ul>
+          </div>
+          
+          <!-- TAB 3: EXTRA EXAMPLES / CALCULATORS -->
+          <div class="tab-content" id="tab-examples">
+            
+      <div style="background:rgba(255,255,255,0.03); border:1px solid var(--line); padding:15px; border-radius:8px;">
+        <h4 style="margin-top:0; color:var(--chalk-yellow);"><span class="bn">🧬 আইসোটোপ ল্যাব</span><span class="en">🧬 Isotope Lab</span></h4>
+        <p style="font-size:0.75rem; opacity:0.8;">
+          <span class="bn">আইসোটোপ হলো একই পরমাণুর ভিন্ন ভরসংখ্যা বিশিষ্ট রূপ (প্রোটন এক কিন্তু নিউট্রন সংখ্যা ভিন্ন)। হাইড্রোজেন আইসোটোপ দেখুন:</span>
+          <span class="en">Isotopes have the same atomic number but different neutron counts. Compare Hydrogen isotopes:</span>
+        </p>
+        <div style="display:flex; flex-direction:column; gap:4px; font-size:0.8rem;">
+          <div>🔴 <b>Protium (প্রোটিয়াম):</b> 1 Proton, 0 Neutrons (Normal)</div>
+          <div>🟡 <b>Deuterium (ডিউটেরিয়াম):</b> 1 Proton, 1 Neutron (Heavy water)</div>
+          <div>🟢 <b>Tritium (ট্রিটিয়াম):</b> 1 Proton, 2 Neutrons (Radioactive)</div>
+        </div>
+      </div>
+    
+          </div>
+          
+          <!-- TAB 4: QUIZ -->
+          <div class="tab-content" id="tab-quiz">
+            <div class="quiz-panel" id="quizPanel">
+              <!-- Quiz rendered dynamically by JS -->
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- RIGHT PANE: ANDROID DEVICE MOCKUP -->
+      <div>
+        <div class="android-device">
+          <div class="android-status-bar"><span class="time">09:42</span><div class="icons">📶 🔋 98%</div></div>
+          <div class="android-screen">
+            <div class="app-title-bar">
+              <span class="app-logo">⚛️</span>
+              <span class="app-name">
+                <span class="bn">বোর পরমাণু গঠন</span>
+                <span class="en">Bohr Atom Builder</span>
+              </span>
+            </div>
+            <div class="app-instruction">
+              <span class="bn">প্রোটন ও ইলেকট্রন স্লাইডার নাড়ান। এটি অরবিটালে ইলেকট্রন সাজাবে এবং আধান (Charge) প্রদর্শন করবে।</span>
+              <span class="en">Slide Proton and Electron counts. Watch Bohr orbits populate and calculate net ionic charge.</span>
+            </div>
+            
+            <!-- Simulation UI Container -->
+            
+      <div class="c5-chamber" id="c5Chamber">
+        <div class="c5-nucleus" id="c5Nuc">1p</div>
+        <div class="c5-orbit o1"></div>
+        <div class="c5-orbit o2"></div>
+      </div>
+      <div style="margin-top:12px;">
+        <div class="p-slider-row">
+          <label><span>PROTONS</span><b id="c5PVal">1</b></label>
+          <input type="range" class="p-slider" id="c5P" min="1" max="6" value="1">
+        </div>
+        <div class="p-slider-row">
+          <label><span>ELECTRONS</span><b id="c5EVal">1</b></label>
+          <input type="range" class="p-slider" id="c5E" min="0" max="6" value="1">
+        </div>
+      </div>
+      <div class="gauge-wrap" style="font-size:0.7rem; display:flex; justify-content:space-between; margin-top:8px;">
+        <span>🏷️ <b>Element:</b> <span id="c5ElementName">H</span></span>
+        <span>⚡ <b>Charge:</b> <b id="c5ChargeText">Neutral</b></span>
+      </div>
+    
+            
+          </div>
+          <div class="android-nav-bar">
+            <div class="back" onclick="history.back()"></div>
+            <div class="home" onclick="window.location.href='science.html'"></div>
+            <div class="recents"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+</div>
+
+<script src="science_common.js"></script>
+<script>
+  // Simple tab switching logic
+  function switchTab(btn, tabId) {
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById('tab-' + tabId).classList.add('active');
+    
+    // Play a click tick
+    AudioFX.init();
+  }
+</script>
+<script src="science_ch5.js"></script>
+</body>
+</html>

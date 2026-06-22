@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="bn" class="lang-bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>States of Matter · Class 9-10 Science Portal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@500;600&family=Tiro+Bangla&family=Hind+Siliguri:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="science_style.css">
+</head>
+<body>
+
+<div class="app-container">
+  
+  <!-- PERSISTENT SIDEBAR INJECTED VIA COMMON.JS -->
+  <div class="sidebar" id="sidebar"></div>
+
+  <!-- MAIN CHAPTER CONTENT -->
+  <main class="main-content">
+    
+    <header class="lesson-header">
+      <div class="lesson-meta">
+        <span class="subject-badge chemistry">Chemistry</span>
+        <span class="eyebrow">Chapter 04</span>
+      </div>
+      <h1>
+        <span class="bn">পদার্থের অবস্থা</span>
+        <span class="en">States of Matter</span>
+      </h1>
+    </header>
+
+    <div class="grid2">
+      <!-- LEFT PANE: LESSONS, ACTIVITIES, EXTRA EXAMPLES, AND QUIZ -->
+      <div style="display:flex; flex-direction:column; gap:20px;">
+        <div class="content-pane">
+          <div class="tab-nav">
+            <button class="tab-btn active" onclick="switchTab(this, 'lesson')">
+              <span class="bn">📖 মূল তথ্য</span><span class="en">📖 Core Info</span>
+            </button>
+            <button class="tab-btn" onclick="switchTab(this, 'activity')">
+              <span class="bn">🏫 শ্রেণিকক্ষ কার্যক্রম</span><span class="en">🏫 Activities</span>
+            </button>
+            <button class="tab-btn" onclick="switchTab(this, 'examples')">
+              <span class="bn">💡 আরও উদাহরণ</span><span class="en">💡 More Examples</span>
+            </button>
+            <button class="tab-btn" onclick="switchTab(this, 'quiz')" id="quizTabBtn">
+              <span class="bn">📝 কুইজ টেস্ট</span><span class="en">📝 Quiz Test</span>
+            </button>
+          </div>
+          
+          <!-- TAB 1: THEORY -->
+          <div class="tab-content active" id="tab-lesson">
+            <p class="lede" style="font-size:1.1rem; line-height:1.6; color:var(--cyan); margin-bottom:15px;">
+              <span class="bn">তাপমাত্রার পরিবর্তনের সাথে অণুর মধ্যকার আন্তঃআণবিক আকর্ষণ শক্তি বদলে পদার্থের অবস্থার পরিবর্তন ঘটে।</span>
+              <span class="en">Varying thermal energy changes intermolecular attractions, transitioning matter between solid, liquid, and gas.</span>
+            </p>
+            <div style="line-height:1.6; font-size:0.92rem; opacity:0.9;">
+              
+      <p class="bn"><b>১. কণার গতিতত্ত্ব:</b> সকল পদার্থ ক্ষুদ্র কণা দিয়ে গঠিত এবং কণাগুলো সর্বদা গতিশীল। কঠিন অবস্থায় আন্তঃআণবিক আকর্ষণ সবচেয়ে বেশি থাকে ও কণাগুলো নির্দিষ্ট স্থানে স্পন্দিত হয়। তরল অবস্থায় কণাগুলো কিছুটা শিথিল হয় এবং গ্যাসীয় অবস্থায় আন্তঃআণবিক আকর্ষণ প্রায় থাকে না বললেই চলে এবং কণাগুলো মুক্তভাবে ছুটে বেড়ায়।</p>
+      <p class="en"><b>1. Kinetic Theory:</b> Matter consists of moving particles. Solids have strong intermolecular force (ordered grid). Liquids flow (loose particles). Gases bounce freely (negligible attraction).</p>
+      <p class="bn"><b>২. গলনাঙ্ক ও স্ফুটনাঙ্ক:</b> যে তাপমাত্রায় কঠিন তরলে রূপান্তরিত হয় তা গলনাঙ্ক এবং তরল গ্যাসে রূপ নেয় তা স্ফুটনাঙ্ক। গলনের সময় তাপ দিলেও তাপমাত্রা স্থির থাকে যা সুপ্ততাপ (Latent Heat) নামে পরিচিত।</p>
+      <p class="en"><b>2. Melting & Boiling Points:</b> Constant heating plateaus (latent heat) during state phase changes.</p>
+    
+            </div>
+          </div>
+          
+          <!-- TAB 2: ACTIVITIES -->
+          <div class="tab-content" id="tab-activity">
+            <ul class="activity-list">
+              <li>
+                <span class="activity-tag">OUTCOME</span>
+                <strong><span class="bn">শিখনফল:</span><span class="en">Learning Outcome:</span></strong><br>
+                <span class="bn">কণার গতিতত্ত্ব অনুযায়ী কঠিন, তরল ও গ্যাসীয় দশার অণুর বিন্যাস বিশ্লেষণ করা।</span>
+                <span class="en">Analyze molecular arrangements in solid, liquid, and gas phases.</span>
+              </li>
+              <li>
+                <span class="activity-tag" style="background:rgba(95,224,224,0.15); color:var(--cyan);">ACTIVITY</span>
+                <strong><span class="bn">কার্যক্রম:</span><span class="en">Class Activity:</span></strong><br>
+                <span class="bn">চেম্বারের তাপমাত্রা বৃদ্ধি করে তরল ও বাষ্পীয় কণার এলোমেলো গতি পর্যবেক্ষণ করুন।</span>
+                <span class="en">Raise heat and observe particle arrangements change from structured grids to vapor bounce.</span>
+              </li>
+            </ul>
+          </div>
+          
+          <!-- TAB 3: EXTRA EXAMPLES / CALCULATORS -->
+          <div class="tab-content" id="tab-examples">
+            
+      <div style="background:rgba(255,255,255,0.03); border:1px solid var(--line); padding:15px; border-radius:8px;">
+        <h4 style="margin-top:0; color:var(--chalk-yellow);"><span class="bn">📈 জল গরম করার তাপমাত্রার বক্ররেখা</span><span class="en">📈 Heating Curve of Water</span></h4>
+        <p style="font-size:0.75rem; opacity:0.8;">
+          <span class="bn">বরফকে উত্তপ্ত করলে গলনাঙ্ক (০°C) এবং স্ফুটনাঙ্ক (১০০°C) এ তাপমাত্রা স্থির থাকে। "উত্তপ্ত করুন" বোতাম চেপে সুপ্ততাপের দশাগুলো পর্যবেক্ষণ করুন।</span>
+          <span class="en">Observe the heat curve of water. Temperature plateaus during melting (0°C) and boiling (100°C).</span>
+        </p>
+        <button class="p-btn p-btn-accent" onclick="startHeatingCurve()" style="width:100%;">🔥 Heat Water</button>
+        <div style="font-size:0.8rem; font-weight:bold; color:var(--cyan); margin-top:8px; text-align:center;">
+          <span class="bn">বর্তমান তাপমাত্রা: </span><span class="en">Current Temp: </span><span id="curveTemp">-10</span>°C 
+          (<span id="curvePhase">Solid Ice</span>)
+        </div>
+      </div>
+    
+          </div>
+          
+          <!-- TAB 4: QUIZ -->
+          <div class="tab-content" id="tab-quiz">
+            <div class="quiz-panel" id="quizPanel">
+              <!-- Quiz rendered dynamically by JS -->
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- RIGHT PANE: ANDROID DEVICE MOCKUP -->
+      <div>
+        <div class="android-device">
+          <div class="android-status-bar"><span class="time">09:42</span><div class="icons">📶 🔋 98%</div></div>
+          <div class="android-screen">
+            <div class="app-title-bar">
+              <span class="app-logo">💧</span>
+              <span class="app-name">
+                <span class="bn">পদার্থের দশা পরিবর্তন</span>
+                <span class="en">Phase Simulator</span>
+              </span>
+            </div>
+            <div class="app-instruction">
+              <span class="bn">উত্তাপ (Heat) বাড়ান। কণাগুলো কঠিন থেকে তরল হয়ে গ্যাসে রূপান্তরিত হবে।</span>
+              <span class="en">Slide heat level. Check molecular alignment changes from Solid lattice, Liquid flows, to Gaseous bounces.</span>
+            </div>
+            
+            <!-- Simulation UI Container -->
+            
+      <div class="c4-chamber" id="c4Chamber">
+        <!-- Particles generated here -->
+      </div>
+      <div style="margin-top:12px;">
+        <div class="p-slider-row">
+          <label><span>HEAT LEVEL</span><b id="c4HeatText">Solid (কঠিন)</b></label>
+          <input type="range" class="p-slider" id="c4Heat" min="1" max="3" value="1">
+        </div>
+      </div>
+    
+            
+          </div>
+          <div class="android-nav-bar">
+            <div class="back" onclick="history.back()"></div>
+            <div class="home" onclick="window.location.href='science.html'"></div>
+            <div class="recents"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+</div>
+
+<script src="science_common.js"></script>
+<script>
+  // Simple tab switching logic
+  function switchTab(btn, tabId) {
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById('tab-' + tabId).classList.add('active');
+    
+    // Play a click tick
+    AudioFX.init();
+  }
+</script>
+<script src="science_ch4.js"></script>
+</body>
+</html>

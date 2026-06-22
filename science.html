@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="bn" class="lang-bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>বিজ্ঞান অনুসন্ধানী ড্যাশবোর্ড · Class 9-10 Science Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@500;600&family=Tiro+Bangla&family=Hind+Siliguri:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="science_style.css">
+</head>
+<body>
+
+<div class="app-container">
+  
+  <!-- PERSISTENT SIDEBAR INJECTED VIA COMMON.JS -->
+  <div class="sidebar" id="sidebar"></div>
+
+  <!-- MAIN HUB CONTENT -->
+  <main class="main-content">
+    
+    <header class="lesson-header" style="border-bottom:none; padding-bottom:0;">
+      <div class="eyebrow">Gamified Learning Portal · NCTB 2026</div>
+      <h1>
+        <span class="bn">৯ম-১০ম শ্রেণি <span class="accent" style="color:var(--teal)">বিজ্ঞান</span> অনুসন্ধানী পাঠ — গেম ল্যাব</span>
+        <span class="en">Class 9-10 <span class="accent" style="color:var(--teal)">Science</span> Inquirer — Game Lab</span>
+      </h1>
+      <p style="opacity: 0.8; font-size: 0.95rem; margin-top: 8px;">
+        <span class="bn">অনুশীলনী এবং অ্যান্ড্রয়েড গেম সিমুলেশনের মাধ্যমে বিজ্ঞান শিক্ষাকে আরও সহজ ও আনন্দদায়ক করুন। কুইজ শেষ করে XP অর্জন করুন এবং ব্যাজ আনলক করুন!</span>
+        <span class="en">Make science learning engaging with simulations and quizzes. Earn XP, level up your profile, and collect achievement badges!</span>
+      </p>
+    </header>
+
+    <!-- STUDENT PROFILE SECTION -->
+    <section class="profile-section">
+      <h2 style="font-size:1.2rem; color:var(--chalk-yellow); border-bottom:1px dashed var(--line); padding-bottom:8px;">
+        <span class="bn">👥 শিক্ষার্থী প্রোফাইল ডাটাবেজ</span>
+        <span class="en">👥 Student Profiles Database</span>
+      </h2>
+      <div class="profile-grid" id="profileGrid">
+        <!-- Rendered dynamically in JS -->
+      </div>
+    </section>
+
+    <!-- CURRICULUM CHAPTER GRID -->
+    <section>
+      <h2 style="font-size:1.2rem; color:var(--cyan); margin-bottom:15px;">
+        <span class="bn">📖 পাঠ্যক্রম ও বিষয়সমূহ</span>
+        <span class="en">📖 Curriculum Chapter Labs</span>
+      </h2>
+      <div class="chapters-grid" id="chaptersGrid">
+        <!-- Rendered dynamically in JS -->
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<!-- PROFILE CREATE MODAL -->
+<div class="modal-overlay" id="profileModal">
+  <div class="modal-content">
+    <h3 style="margin-top:0; color:var(--teal); font-size:1.15rem; margin-bottom:15px;">
+      <span class="bn">➕ নতুন প্রোফাইল তৈরি করুন</span>
+      <span class="en">➕ Create New Profile</span>
+    </h3>
+    <form id="profileForm" onsubmit="event.preventDefault(); submitNewProfile();">
+      <div class="form-group">
+        <label>
+          <span class="bn">শিক্ষার্থীর নাম</span>
+          <span class="en">Student Name</span>
+        </label>
+        <input type="text" id="newName" class="form-input" required maxlength="18" placeholder="যেমন: তাহসিন">
+      </div>
+      <div class="form-group">
+        <label>
+          <span class="bn">অবতার (Avatar) নির্বাচন করুন</span>
+          <span class="en">Select Avatar</span>
+        </label>
+        <div class="avatar-selector">
+          <div class="avatar-opt selected" onclick="selectAvatar(this)">👨‍🎓</div>
+          <div class="avatar-opt" onclick="selectAvatar(this)">👩‍🎓</div>
+          <div class="avatar-opt" onclick="selectAvatar(this)">🧑‍🔬</div>
+          <div class="avatar-opt" onclick="selectAvatar(this)">🚀</div>
+          <div class="avatar-opt" onclick="selectAvatar(this)">🐱</div>
+        </div>
+      </div>
+      <div style="display:flex; justify-content:flex-end; gap:10px; margin-top:20px;">
+        <button type="button" class="p-btn" onclick="closeProfileModal()">
+          <span class="bn">বাতিল</span>
+          <span class="en">Cancel</span>
+        </button>
+        <button type="submit" class="p-btn p-btn-accent">
+          <span class="bn">তৈরি করুন</span>
+          <span class="en">Create</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<script src="science_common.js"></script>
+<script>
+  let selectedAvatarIcon = '👨‍🎓';
+
+  function renderProfiles() {
+    const db = DB.load();
+    const grid = document.getElementById('profileGrid');
+    let html = '';
+    
+    db.profiles.forEach(p => {
+      const isActive = p.id === db.activeProfileId;
+      const lvl = Math.floor((p.xp || 0) / 500) + 1;
+      html += `
+        <div class="profile-card ${isActive ? 'active' : ''}" onclick="switchProfile('${p.id}')">
+          <div class="avatar">${p.avatar || '👨‍🎓'}</div>
+          <div class="name">${p.name}</div>
+          <div class="level">Lvl ${lvl} • ${p.xp || 0} XP</div>
+        </div>
+      `;
+    });
+    
+    // Add profile card
+    html += `
+      <div class="add-profile-card" onclick="openProfileModal()">
+        <span class="icon">➕</span>
+        <span class="bn" style="font-size:0.8rem;">যোগ করুন</span>
+        <span class="en" style="font-size:0.8rem;">Add Student</span>
+      </div>
+    `;
+    
+    grid.innerHTML = html;
+  }
+
+  function renderChaptersGrid() {
+    const profile = DB.getActiveProfile();
+    const grid = document.getElementById('chaptersGrid');
+    let html = '';
+    
+    chapterDirectory.forEach(ch => {
+      const isQuizDone = profile.quizScores[ch.id] !== undefined;
+      const isSimDone = profile.completedSims[ch.id] !== undefined;
+      
+      let pct = 0;
+      if (isQuizDone && isSimDone) pct = 100;
+      else if (isQuizDone || isSimDone) pct = 50;
+      
+      html += `
+        <a href="${ch.file}" class="chapter-card ${ch.cat}">
+          <div>
+            <span class="card-num">${ch.num}</span>
+            <span class="card-subject ${ch.cat}">
+              <span class="bn">${commonTranslations[ch.cat].bn}</span>
+              <span class="en">${commonTranslations[ch.cat].en}</span>
+            </span>
+            <h3>
+              <span class="bn">${ch.bn}</span>
+              <span class="en">${ch.en}</span>
+            </h3>
+            <div class="card-desc">
+              <span class="bn">ল্যাব সিমুলেটর এবং ধারণামূলক কার্যক্রম অনুশীলন করুন।</span>
+              <span class="en">Interact with laboratory models and classroom questions.</span>
+            </div>
+          </div>
+          <div class="card-progress-bar">
+            <div class="card-progress-fill" style="width: ${pct}%"></div>
+          </div>
+        </a>
+      `;
+    });
+    
+    grid.innerHTML = html;
+  }
+
+  function switchProfile(pid) {
+    const db = DB.load();
+    db.activeProfileId = pid;
+    DB.save(db);
+    AudioFX.playChime();
+    renderProfiles();
+    renderChaptersGrid();
+    DB.syncSidebar();
+  }
+
+  function openProfileModal() {
+    document.getElementById('profileModal').classList.add('active');
+  }
+
+  function closeProfileModal() {
+    document.getElementById('profileModal').classList.remove('active');
+    document.getElementById('profileForm').reset();
+  }
+
+  function selectAvatar(el) {
+    document.querySelectorAll('.avatar-opt').forEach(opt => opt.classList.remove('selected'));
+    el.classList.add('selected');
+    selectedAvatarIcon = el.textContent;
+  }
+
+  function submitNewProfile() {
+    const nameInput = document.getElementById('newName').value.trim();
+    if (!nameInput) return;
+    
+    const db = DB.load();
+    const newId = 'p_' + Date.now();
+    
+    db.profiles.push({
+      id: newId,
+      name: nameInput,
+      avatar: selectedAvatarIcon,
+      xp: 0,
+      quizScores: {},
+      completedSims: {}
+    });
+    
+    db.activeProfileId = newId;
+    DB.save(db);
+    
+    AudioFX.playLevelUp();
+    closeProfileModal();
+    renderProfiles();
+    renderChaptersGrid();
+    DB.syncSidebar();
+  }
+
+  // Language refresh triggers
+  window.refreshLocalPageStrings = function() {
+    renderProfiles();
+    renderChaptersGrid();
+  };
+
+  window.addEventListener('DOMContentLoaded', () => {
+    renderProfiles();
+    renderChaptersGrid();
+  });
+</script>
+</body>
+</html>

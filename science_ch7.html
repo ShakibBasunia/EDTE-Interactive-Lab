@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="bn" class="lang-bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chemical Bonds · Class 9-10 Science Portal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@500;600&family=Tiro+Bangla&family=Hind+Siliguri:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="science_style.css">
+</head>
+<body>
+
+<div class="app-container">
+  
+  <!-- PERSISTENT SIDEBAR INJECTED VIA COMMON.JS -->
+  <div class="sidebar" id="sidebar"></div>
+
+  <!-- MAIN CHAPTER CONTENT -->
+  <main class="main-content">
+    
+    <header class="lesson-header">
+      <div class="lesson-meta">
+        <span class="subject-badge chemistry">Chemistry</span>
+        <span class="eyebrow">Chapter 07</span>
+      </div>
+      <h1>
+        <span class="bn">রাসায়নিক বন্ধন</span>
+        <span class="en">Chemical Bonds</span>
+      </h1>
+    </header>
+
+    <div class="grid2">
+      <!-- LEFT PANE: LESSONS, ACTIVITIES, EXTRA EXAMPLES, AND QUIZ -->
+      <div style="display:flex; flex-direction:column; gap:20px;">
+        <div class="content-pane">
+          <div class="tab-nav">
+            <button class="tab-btn active" onclick="switchTab(this, 'lesson')">
+              <span class="bn">📖 মূল তথ্য</span><span class="en">📖 Core Info</span>
+            </button>
+            <button class="tab-btn" onclick="switchTab(this, 'activity')">
+              <span class="bn">🏫 শ্রেণিকক্ষ কার্যক্রম</span><span class="en">🏫 Activities</span>
+            </button>
+            <button class="tab-btn" onclick="switchTab(this, 'examples')">
+              <span class="bn">💡 আরও উদাহরণ</span><span class="en">💡 More Examples</span>
+            </button>
+            <button class="tab-btn" onclick="switchTab(this, 'quiz')" id="quizTabBtn">
+              <span class="bn">📝 কুইজ টেস্ট</span><span class="en">📝 Quiz Test</span>
+            </button>
+          </div>
+          
+          <!-- TAB 1: THEORY -->
+          <div class="tab-content active" id="tab-lesson">
+            <p class="lede" style="font-size:1.1rem; line-height:1.6; color:var(--cyan); margin-bottom:15px;">
+              <span class="bn">পরমাণু তার বহিঃস্থ স্তরের ইলেকট্রন আদান-প্রদান বা শেয়ারের মাধ্যমে সুস্থিত নিষ্ক্রিয় গ্যাসীয় কাঠামো অর্জন করে।</span>
+              <span class="en">Atoms share or transfer valence electrons to achieve stable noble-gas electronic configurations.</span>
+            </p>
+            <div style="line-height:1.6; font-size:0.92rem; opacity:0.9;">
+              
+      <p class="bn"><b>১. আয়নিক বন্ধন (Ionic Bond):</b> ধাতু ও অধাতুর মধ্যে ইলেকট্রন স্থানান্তরের মাধ্যমে সৃষ্ট বন্ধন। ধাতু ইলেকট্রন বর্জন করে ক্যাটায়নে (\\(+\\() এবং অধাতু ইলেকট্রন গ্রহণ করে অ্যানায়নে (\\(-\\() পরিণত হয়। বিপরীত আধানের কুলম্ব আকর্ষণ বলের মাধ্যমে এরা যুক্ত থাকে। যেমন: \\(\text{NaCl}\\(।</p>
+      <p class="en"><b>1. Ionic Bonding:</b> Forms via valence electron transfer from metals (cations) to non-metals (anions). Electrostatic Coulomb attractions hold them together. E.g., \\(\text{NaCl}\\(.</p>
+      <p class="bn"><b>২. সমযোজী বন্ধন (Covalent Bond):</b> দুটি অধাতুর মধ্যে ইলেকট্রন শেয়ারের মাধ্যমে সৃষ্ট বন্ধন। শেয়ার করা ইলেকট্রন জোড় উভয় পরমাণুর নিউক্লিয়াস দ্বারা আকর্ষিত থাকে। যেমন: \\(\text{H}_2\text{O}\\(।</p>
+      <p class="en"><b>2. Covalent Bonding:</b> Forms when non-metals share electron pairs to attain shell stability. E.g., \\(\text{H}_2\text{O}\\(.</p>
+    
+            </div>
+          </div>
+          
+          <!-- TAB 2: ACTIVITIES -->
+          <div class="tab-content" id="tab-activity">
+            <ul class="activity-list">
+              <li>
+                <span class="activity-tag">OUTCOME</span>
+                <strong><span class="bn">শিখনফল:</span><span class="en">Learning Outcome:</span></strong><br>
+                <span class="bn">আয়নিক বন্ধনের ইলেকট্রন স্থানান্তর এবং সমযোজী বন্ধনের জোড় গঠন চিত্রায়িত করা।</span>
+                <span class="en">Model ionic electron transfers and covalent shared pairs.</span>
+              </li>
+              <li>
+                <span class="activity-tag" style="background:rgba(95,224,224,0.15); color:var(--cyan);">ACTIVITY</span>
+                <strong><span class="bn">কার্যক্রম:</span><span class="en">Class Activity:</span></strong><br>
+                <span class="bn">আয়নিক এবং সমযোজী বন্ধন বোতাম চেপে পরমাণুর পরিবর্তন ও ইলেকট্রন গতিবিধি দেখুন।</span>
+                <span class="en">Toggle Ionic and Covalent buttons to watch valence electron behaviors.</span>
+              </li>
+            </ul>
+          </div>
+          
+          <!-- TAB 3: EXTRA EXAMPLES / CALCULATORS -->
+          <div class="tab-content" id="tab-examples">
+            
+      <div style="background:rgba(255,255,255,0.03); border:1px solid var(--line); padding:15px; border-radius:8px;">
+        <h4 style="margin-top:0; color:var(--chalk-yellow);"><span class="bn">🧪 লবণ বনাম তেল দ্রাব্যতা পরীক্ষা</span><span class="en">🧪 Solubility Lab (Salt vs Oil)</span></h4>
+        <p style="font-size:0.75rem; opacity:0.8;">
+          <span class="bn">আয়নিক যৌগ (লবণ) পোলার দ্রাবক পানিতে দ্রবীভূত হয়, কিন্তু সমযোজী অপোলার যৌগ (теল) পানিতে গলে না।</span>
+          <span class="en">Ionic NaCl dissolves in polar water, whereas covalent non-polar oil separates.</span>
+        </p>
+        <div style="display:flex; justify-content:space-around; margin-top:8px;">
+          <button class="p-btn" onclick="runSolubility('salt')">Add Salt</button>
+          <button class="p-btn" onclick="runSolubility('oil')">Add Oil</button>
+        </div>
+        <div style="font-size:0.75rem; text-align:center; margin-top:8px; color:var(--cyan);" id="solubilityResult">
+          Select substance to dissolve.
+        </div>
+      </div>
+    
+          </div>
+          
+          <!-- TAB 4: QUIZ -->
+          <div class="tab-content" id="tab-quiz">
+            <div class="quiz-panel" id="quizPanel">
+              <!-- Quiz rendered dynamically by JS -->
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- RIGHT PANE: ANDROID DEVICE MOCKUP -->
+      <div>
+        <div class="android-device">
+          <div class="android-status-bar"><span class="time">09:42</span><div class="icons">📶 🔋 98%</div></div>
+          <div class="android-screen">
+            <div class="app-title-bar">
+              <span class="app-logo">🤝</span>
+              <span class="app-name">
+                <span class="bn">বন্ধন নির্মাতা</span>
+                <span class="en">Bond Builder</span>
+              </span>
+            </div>
+            <div class="app-instruction">
+              <span class="bn">আয়নিক বা সমযোজী বোতাম টিপুন। ইলেকট্রন স্থানান্তরের ফলে উৎপন্ন আধান এবং আকর্ষণের ফলে বন্ধন গঠন দেখুন।</span>
+              <span class="en">Toggle Ionic or Covalent bonds. Watch sodium transfer its outer electron, or oxygen share pairs with hydrogen.</span>
+            </div>
+            
+            <!-- Simulation UI Container -->
+            
+      <div class="c7-stage" id="c7Stage">
+        <!-- Rendered dynamically by JS -->
+      </div>
+      <div style="display:flex; gap:10px; margin-top:12px;">
+        <button class="p-btn p-btn-accent" id="c7IonicBtn" style="flex:1;"><span class="bn">আয়নিক (NaCl)</span><span class="en">Ionic (NaCl)</span></button>
+        <button class="p-btn" id="c7CovalentBtn" style="flex:1;"><span class="bn">সমযোজী (H₂O)</span><span class="en">Covalent (H₂O)</span></button>
+      </div>
+    
+            
+          </div>
+          <div class="android-nav-bar">
+            <div class="back" onclick="history.back()"></div>
+            <div class="home" onclick="window.location.href='science.html'"></div>
+            <div class="recents"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+</div>
+
+<script src="science_common.js"></script>
+<script>
+  // Simple tab switching logic
+  function switchTab(btn, tabId) {
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById('tab-' + tabId).classList.add('active');
+    
+    // Play a click tick
+    AudioFX.init();
+  }
+</script>
+<script src="science_ch7.js"></script>
+</body>
+</html>

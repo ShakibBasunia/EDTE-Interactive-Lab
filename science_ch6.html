@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="bn" class="lang-bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Periodic Table · Class 9-10 Science Portal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@500;600&family=Tiro+Bangla&family=Hind+Siliguri:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="science_style.css">
+</head>
+<body>
+
+<div class="app-container">
+  
+  <!-- PERSISTENT SIDEBAR INJECTED VIA COMMON.JS -->
+  <div class="sidebar" id="sidebar"></div>
+
+  <!-- MAIN CHAPTER CONTENT -->
+  <main class="main-content">
+    
+    <header class="lesson-header">
+      <div class="lesson-meta">
+        <span class="subject-badge chemistry">Chemistry</span>
+        <span class="eyebrow">Chapter 06</span>
+      </div>
+      <h1>
+        <span class="bn">পর্যায় সারণি</span>
+        <span class="en">Periodic Table</span>
+      </h1>
+    </header>
+
+    <div class="grid2">
+      <!-- LEFT PANE: LESSONS, ACTIVITIES, EXTRA EXAMPLES, AND QUIZ -->
+      <div style="display:flex; flex-direction:column; gap:20px;">
+        <div class="content-pane">
+          <div class="tab-nav">
+            <button class="tab-btn active" onclick="switchTab(this, 'lesson')">
+              <span class="bn">📖 মূল তথ্য</span><span class="en">📖 Core Info</span>
+            </button>
+            <button class="tab-btn" onclick="switchTab(this, 'activity')">
+              <span class="bn">🏫 শ্রেণিকক্ষ কার্যক্রম</span><span class="en">🏫 Activities</span>
+            </button>
+            <button class="tab-btn" onclick="switchTab(this, 'examples')">
+              <span class="bn">💡 আরও উদাহরণ</span><span class="en">💡 More Examples</span>
+            </button>
+            <button class="tab-btn" onclick="switchTab(this, 'quiz')" id="quizTabBtn">
+              <span class="bn">📝 কুইজ টেস্ট</span><span class="en">📝 Quiz Test</span>
+            </button>
+          </div>
+          
+          <!-- TAB 1: THEORY -->
+          <div class="tab-content active" id="tab-lesson">
+            <p class="lede" style="font-size:1.1rem; line-height:1.6; color:var(--cyan); margin-bottom:15px;">
+              <span class="bn">পারমাণবিক সংখ্যার ক্রমানুসারে মৌলগুলোর ভৌত ও রাসায়নিক ধর্ম পর্যায়বৃত্তভাবে আবর্তিত হয়।</span>
+              <span class="en">Elements arranged by atomic number exhibit periodic repetitions of chemical and physical behaviors.</span>
+            </p>
+            <div style="line-height:1.6; font-size:0.92rem; opacity:0.9;">
+              
+      <p class="bn"><b>১. পর্যায় সারণি আবিষ্কার:</b> ১৮৬৯ সালে রুশ বিজ্ঞানী দিমিত্রি মেন্ডেলিভ প্রথম পর্যায় সূত্র প্রকাশ করেন। আধুনিক পর্যায় সারণি পারমাণবিক সংখ্যার ওপর ভিত্তি করে তৈরি যেখানে ৭টি পর্যায় (Horizontal rows) এবং ১৮টি গ্রুপ (Vertical columns) রয়েছে।</p>
+      <p class="en"><b>1. History:</b> Mendeleev published the first periodic law. Modern periodic tables arrange elements by atomic number, containing 7 periods and 18 groups.</p>
+      <p class="bn"><b>২. মৌলের শ্রেণীকরণ:</b> সমধর্মী মৌলসমূহ একই গ্রুপে থাকে। যেমন: গ্রুপ ১ (ক্ষার ধাতু - ক্ষার সৃষ্টি করে), গ্রুপ ১৭ (হ্যালোজেন - লবণ উৎপাদক) এবং গ্রুপ ১৮ (নিষ্ক্রিয় গ্যাস - বিক্রিয়া করে না)।</p>
+      <p class="en"><b>2. Periodic Trends:</b> Elements in the same group share valencies. E.g., Group 1 (Alkali Metals), Group 17 (Halogens), Group 18 (Noble Gases).</p>
+    
+            </div>
+          </div>
+          
+          <!-- TAB 2: ACTIVITIES -->
+          <div class="tab-content" id="tab-activity">
+            <ul class="activity-list">
+              <li>
+                <span class="activity-tag">OUTCOME</span>
+                <strong><span class="bn">শিখনফল:</span><span class="en">Learning Outcome:</span></strong><br>
+                <span class="bn">ক্ষার ধাতু, হ্যালোজেন ও নিষ্ক্রিয় গ্যাসের বৈশিষ্ট্যসমূহ পর্যায় সারণি থেকে ব্যাখ্যা করা।</span>
+                <span class="en">Classify elements and identify trends in alkali metals, halogens, and noble gases.</span>
+              </li>
+              <li>
+                <span class="activity-tag" style="background:rgba(95,224,224,0.15); color:var(--cyan);">ACTIVITY</span>
+                <strong><span class="bn">কার্যক্রম:</span><span class="en">Class Activity:</span></strong><br>
+                <span class="bn">সারণির মৌলগুলোতে ট্যাপ করে তাদের পারমাণবিক গঠন ও বিক্রিয়ার ধরণ জানুন।</span>
+                <span class="en">Tap table elements to inspect groups, periods, structures, and reaction properties.</span>
+              </li>
+            </ul>
+          </div>
+          
+          <!-- TAB 3: EXTRA EXAMPLES / CALCULATORS -->
+          <div class="tab-content" id="tab-examples">
+            
+      <div style="background:rgba(255,255,255,0.03); border:1px solid var(--line); padding:15px; border-radius:8px;">
+        <h4 style="margin-top:0; color:var(--chalk-yellow);"><span class="bn">💥 ক্ষার ধাতুর সক্রিয়তা প্রদর্শন</span><span class="en">💥 Alkali Metal Reactivity</span></h4>
+        <p style="font-size:0.75rem; opacity:0.8;">
+          <span class="bn">গ্রুপ-১ এর ক্ষার ধাতু পানির সংস্পর্শে আসলে তীব্রভাবে বিক্রিয়া করে হাইড্রোজেন গ্যাস উৎপাদন করে ও বিস্ফোরণ ঘটায়। সোডিয়াম (Na) পানিতে ফেললে কী ঘটে দেখুন:</span>
+          <span class="en">Group 1 alkali metals react violently with water to release hydrogen gas. Click below to drop Sodium in water:</span>
+        </p>
+        <button class="p-btn" onclick="triggerNaReaction()" style="width:100%;">Drop Sodium in Water</button>
+        <div style="font-size:0.78rem; font-weight:bold; color:#e67e22; margin-top:8px; text-align:center; min-height:18px;" id="reactionText">
+          Container is stable.
+        </div>
+      </div>
+    
+          </div>
+          
+          <!-- TAB 4: QUIZ -->
+          <div class="tab-content" id="tab-quiz">
+            <div class="quiz-panel" id="quizPanel">
+              <!-- Quiz rendered dynamically by JS -->
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- RIGHT PANE: ANDROID DEVICE MOCKUP -->
+      <div>
+        <div class="android-device">
+          <div class="android-status-bar"><span class="time">09:42</span><div class="icons">📶 🔋 98%</div></div>
+          <div class="android-screen">
+            <div class="app-title-bar">
+              <span class="app-logo">📅</span>
+              <span class="app-name">
+                <span class="bn">মৌল এক্সপ্লোরার</span>
+                <span class="en">Element Explorer</span>
+              </span>
+            </div>
+            <div class="app-instruction">
+              <span class="bn">যেকোনো মৌলের ঘরে ট্যাপ করে তার গ্রুপ, পর্যায়, যোজনী এবং রাসায়নিক বৈশিষ্ট্য প্রদর্শন করুন।</span>
+              <span class="en">Click on any element in the grid to display its atomic number, group/period, reactivity properties, and natural occurrences.</span>
+            </div>
+            
+            <!-- Simulation UI Container -->
+            
+      <div class="c6-pgrid" id="c6Grid">
+        <div class="c6-cell active" onclick="selectElement('H', this)"><span class="c6-sym">H</span><span class="c6-num">1</span></div>
+        <div class="c6-cell" onclick="selectElement('He', this)"><span class="c6-sym">He</span><span class="c6-num">2</span></div>
+        <div class="c6-cell" onclick="selectElement('Li', this)"><span class="c6-sym">Li</span><span class="c6-num">3</span></div>
+        <div class="c6-cell" onclick="selectElement('C', this)"><span class="c6-sym">C</span><span class="c6-num">6</span></div>
+        <div class="c6-cell" onclick="selectElement('O', this)"><span class="c6-sym">O</span><span class="c6-num">8</span></div>
+        <div class="c6-cell" onclick="selectElement('Na', this)"><span class="c6-sym">Na</span><span class="c6-num">11</span></div>
+        <div class="c6-cell" onclick="selectElement('Cl', this)"><span class="c6-sym">Cl</span><span class="c6-num">17</span></div>
+        <div class="c6-cell" onclick="selectElement('Fe', this)"><span class="c6-sym">Fe</span><span class="c6-num">26</span></div>
+      </div>
+      <div class="gauge-wrap" style="margin-top:12px; font-size:0.68rem; line-height:1.4;">
+        <div id="c6Details">
+          <strong>Hydrogen (H)</strong><br>
+          Group 1, Period 1. Lightest gas. Highly flammable.
+        </div>
+      </div>
+    
+            
+          </div>
+          <div class="android-nav-bar">
+            <div class="back" onclick="history.back()"></div>
+            <div class="home" onclick="window.location.href='science.html'"></div>
+            <div class="recents"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+</div>
+
+<script src="science_common.js"></script>
+<script>
+  // Simple tab switching logic
+  function switchTab(btn, tabId) {
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById('tab-' + tabId).classList.add('active');
+    
+    // Play a click tick
+    AudioFX.init();
+  }
+</script>
+<script src="science_ch6.js"></script>
+</body>
+</html>

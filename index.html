@@ -1,0 +1,1102 @@
+<!DOCTYPE html>
+<html lang="bn" class="lang-bn">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>শিক্ষা ও বিজ্ঞান পোর্টাল · Educational & Science Portal Index</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@500;600&family=Tiro+Bangla&family=Hind+Siliguri:wght@400;500;600&family=Inter:wght@400;500;600&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --ink: #F4F1E8;
+      --paper: #FBF8F0;
+      --text-dark: #1B2A22;
+      --chalk-yellow: #E8C547;
+      --chalk-coral: #E2725B;
+      --teal: #4FB3A9;
+      --cyan: #5FE0E0;
+      --line: rgba(244, 241, 232, 0.16);
+      --board: #1C3328;
+      --panel: #244234;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      background: var(--board);
+      color: var(--ink);
+      font-family: 'Hind Siliguri', 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      background:
+        radial-gradient(ellipse 70% 50% at 85% 10%, rgba(95, 224, 224, 0.05), transparent 60%),
+        repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.01) 0px, rgba(255, 255, 255, 0.01) 1px, transparent 1px, transparent 34px),
+        var(--board);
+    }
+
+    html.lang-bn .en {
+      display: none !important;
+    }
+
+    html.lang-en .bn {
+      display: none !important;
+    }
+
+    html.lang-en body {
+      font-family: 'Inter', sans-serif;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+      margin: 0;
+      font-weight: 700;
+    }
+
+    html.lang-bn h1,
+    html.lang-bn h2,
+    html.lang-bn h3,
+    html.lang-bn .display-bn {
+      font-family: 'Tiro Bangla', serif;
+    }
+
+    html.lang-en h1,
+    html.lang-en h2,
+    html.lang-en h3 {
+      font-family: 'Space Grotesk', sans-serif;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 50px;
+      position: relative;
+    }
+
+    .eyebrow {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: .75rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      opacity: .75;
+      margin-bottom: 10px;
+    }
+
+    header h1 {
+      font-size: 2.2rem;
+      line-height: 1.3;
+      margin-bottom: 15px;
+    }
+
+    .lang-toggle {
+      position: absolute;
+      top: 0;
+      right: 0;
+      background: rgba(0, 0, 0, 0.4);
+      border: 1px solid var(--line);
+      color: var(--ink);
+      border-radius: 999px;
+      padding: 8px 18px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: .78rem;
+      cursor: pointer;
+      backdrop-filter: blur(8px);
+      transition: all 0.2s ease;
+    }
+
+    .lang-toggle:hover {
+      border-color: var(--chalk-yellow);
+    }
+
+    /* ---------- PORTAL CARDS ---------- */
+    .portal-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 30px;
+      margin-bottom: 50px;
+    }
+
+    .portal-card {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 35px;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .portal-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 6px;
+      height: 100%;
+      background: var(--teal);
+    }
+
+    .portal-card.theories::before {
+      background: var(--chalk-yellow);
+    }
+
+    .portal-card.science::before {
+      background: var(--cyan);
+    }
+
+    .portal-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+      border-color: var(--teal);
+    }
+
+    .portal-card h2 {
+      font-size: 1.5rem;
+      margin-bottom: 15px;
+    }
+
+    .portal-card p {
+      font-size: 0.9rem;
+      line-height: 1.6;
+      opacity: 0.85;
+      margin-bottom: 25px;
+    }
+
+    .portal-btn {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--line);
+      color: var(--ink);
+      padding: 12px 20px;
+      border-radius: 8px;
+      font-weight: bold;
+      text-align: center;
+      transition: all 0.2s;
+      font-size: 0.9rem;
+    }
+
+    .portal-card.theories:hover .portal-btn {
+      background: var(--chalk-yellow);
+      color: var(--text-dark);
+      border-color: var(--chalk-yellow);
+    }
+
+    .portal-card.science:hover .portal-btn {
+      background: var(--cyan);
+      color: var(--text-dark);
+      border-color: var(--cyan);
+    }
+
+    /* ---------- MODEL DIRECTORY SECTION ---------- */
+    .directory-section {
+      background: rgba(0, 0, 0, 0.15);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 40px;
+    }
+
+    .directory-section h2 {
+      font-size: 1.6rem;
+      color: var(--chalk-yellow);
+      margin-bottom: 10px;
+      border-bottom: 1px dashed var(--line);
+      padding-bottom: 15px;
+    }
+
+    .dir-group {
+      margin-top: 30px;
+    }
+
+    .dir-group h3 {
+      font-size: 1.25rem;
+      color: var(--teal);
+      margin-bottom: 15px;
+      padding-left: 8px;
+      border-left: 3px solid var(--teal);
+    }
+
+    .accordion-item {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      margin-bottom: 10px;
+      overflow: hidden;
+    }
+
+    .accordion-header {
+      width: 100%;
+      padding: 16px 20px;
+      background: transparent;
+      border: none;
+      color: var(--ink);
+      text-align: left;
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: background-color 0.2s;
+    }
+
+    .accordion-header:hover {
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    .accordion-header::after {
+      content: '▼';
+      font-size: 0.75rem;
+      transition: transform 0.2s;
+      opacity: 0.7;
+    }
+
+    .accordion-item.active .accordion-header::after {
+      transform: rotate(-180deg);
+    }
+
+    .accordion-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s cubic-bezier(0, 1, 0, 1);
+      padding: 0 20px;
+      font-size: 0.88rem;
+      line-height: 1.5;
+      opacity: 0;
+      background: rgba(0, 0, 0, 0.1);
+    }
+
+    .accordion-item.active .accordion-content {
+      max-height: 500px;
+      padding: 20px;
+      opacity: 1;
+    }
+
+    .model-info-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+      margin-bottom: 15px;
+    }
+
+    @media (max-width: 768px) {
+      .model-info-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .lang-toggle {
+        position: static;
+        display: block;
+        margin: 10px auto 0;
+        width: fit-content;
+      }
+    }
+
+    .info-box {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.04);
+      border-radius: 6px;
+      padding: 12px;
+    }
+
+    .info-box-title {
+      font-weight: bold;
+      color: var(--cyan);
+      margin-bottom: 5px;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+    }
+
+    .launch-link {
+      display: inline-block;
+      background: var(--board);
+      border: 1px solid var(--line);
+      color: var(--ink);
+      padding: 6px 14px;
+      border-radius: 4px;
+      text-decoration: none;
+      font-size: 0.8rem;
+      font-weight: 600;
+      transition: all 0.2s;
+    }
+
+    .launch-link:hover {
+      border-color: var(--chalk-yellow);
+      color: var(--chalk-yellow);
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <header>
+      <button class="lang-toggle" id="langToggle">বাংলা / EN</button>
+      <div class="eyebrow">Interactive Learning Platform · NCTB 2026</div>
+      <h1>
+        <span class="bn">শিক্ষা ও প্রযুক্তি <span style="color:var(--teal)">ইন্টারেক্টিভ ল্যাব</span></span>
+        <span class="en">Educational & Technology <span style="color:var(--teal)">Interactive Lab</span></span>
+      </h1>
+      <p style="opacity: 0.8; font-size: 0.95rem; max-width: 700px; margin: 0 auto;">
+        <span class="bn">শিক্ষাবিদ এবং শিক্ষার্থীদের জন্য শিখন তত্ত্বের ব্যবহারিক বিশ্লেষণ এবং ৯ম-১০ম শ্রেণির বিজ্ঞান
+          বিষয়ের উপর তৈরি করা সিমুলেটরের সমন্বিত লাইব্রেরি।</span>
+        <span class="en">A unified library combining hands-on learning theory guides for educators and gamified science
+          laboratories for Class 9-10 students.</span>
+      </p>
+    </header>
+
+    <!-- PORTALS ENTRY CARDS -->
+    <section class="portal-grid">
+
+      <a href="theories.html" class="portal-card theories">
+        <div>
+          <h2>
+            <span class="bn">🎓 শিখন তত্ত্ব হ্যান্ডবুক</span>
+            <span class="en">🎓 Learning Theories Hub</span>
+          </h2>
+          <p>
+            <span class="bn">মনোবিজ্ঞানের ৮টি মূল শিখন তত্ত্ব (আচরণবাদ, কগনিটিভিজম, সামাজিক শিখন ইত্যাদি) এর
+              ইন্টারেক্টিভ সিমুলেটর এবং ক্লাসরুমে প্রয়োগের সম্পূর্ণ গাইডলাইন।</span>
+            <span class="en">8 core psychological theories of learning (Behaviorism, Cognitivism, Vygotsky ZPD,
+              Connectivism) explained through visual simulator modules for teachers.</span>
+          </p>
+        </div>
+        <div class="portal-btn">
+          <span class="bn">ল্যাব প্রবেশ করুন ➔</span>
+          <span class="en">Enter Theories Lab ➔</span>
+        </div>
+      </a>
+
+      <a href="science.html" class="portal-card science">
+        <div>
+          <h2>
+            <span class="bn">📖 ৯ম-১০ম বিজ্ঞান গেম ল্যাব</span>
+            <span class="en">📖 Class 9-10 Science Game Lab</span>
+          </h2>
+          <p>
+            <span class="bn">NCTB কারিকুলামের ১৪টি অধ্যায়ের উপর তৈরি গ্যামিফাইড ল্যাবরেটরি। এতে আছে কুইজ খেলা, শব্দ
+              তরঙ্গ জেনারেটর, পরমাণু নির্মাতা এবং অভিকর্ষ কক্ষপথ ট্র্যাকার।</span>
+            <span class="en">14 gamified laboratories matching the official Class 9-10 Science syllabus. Complete
+              quizzes, earn XP levels, unlock badges, and run physics/biology simulations.</span>
+          </p>
+        </div>
+        <div class="portal-btn">
+          <span class="bn">ল্যাব প্রবেশ করুন ➔</span>
+          <span class="en">Enter Science Lab ➔</span>
+        </div>
+      </a>
+
+    </section>
+
+    <!-- MODEL DIRECTORY ACCORDION -->
+    <section class="directory-section">
+      <h2>
+        <span class="bn">📋 সিমুলেটর মডেল নির্দেশিকা (Directory)</span>
+        <span class="en">📋 Interactive Model Directory</span>
+      </h2>
+      <p style="font-size:0.85rem; opacity:0.8; margin-bottom:20px;">
+        <span class="bn">নিচের মডেলগুলোতে ক্লিক করে জানুন সেগুলো কীভাবে কাজ করে এবং কীভাবে ক্লাসরুমে প্রয়োগ
+          করবেন।</span>
+        <span class="en">Click on any model below to read how they work, what they simulate, and their real-world
+          connections.</span>
+      </p>
+
+      <!-- GROUP 1: LEARNING THEORIES -->
+      <div class="dir-group">
+        <h3>
+          <span class="bn">শিখন তত্ত্বের ৮টি মডেল</span>
+          <span class="en">8 Learning Theory Models</span>
+        </h3>
+
+        <!-- Model 1: Skinner -->
+        <div class="accordion-item">
+          <button class="accordion-header" onclick="toggleAccordion(this)">
+            <span class="bn">১. আচরণবাদ (Skinner Operant Box)</span>
+            <span class="en">1. Behaviorism (Skinner Operant Box)</span>
+          </button>
+          <div class="accordion-content">
+            <div class="model-info-grid">
+              <div class="info-box">
+                <div class="info-box-title"><span class="bn">যা সিমুলেট করে</span><span class="en">What it
+                    simulates</span></div>
+                <span class="bn">ইতিবাচক পুরস্কার (খাদ্য) এবং নেতিবাচক বাধা (সঞ্চালন ভীতি) এর মাধ্যমে আচরণের
+                  পরিবর্তন।</span>
+                <span class="en">Behavior shaping using positive reinforcement (food pellet) and negative deterrents
+                  (light warning).</span>
+              </div>
+              <div class="info-box">
+                <div class="info-box-title"><span class="bn">কীভাবে ব্যবহার করবেন</span><span class="en">How to
+                    interact</span></div>
+                <span class="bn">সবুজ আলোতে লিভার টিপলে খাবার পড়বে (+১০ XP)। লাল আলো জ্বললে লিভার টিপলে হ্যামস্টার শিউরে
+                  উঠবে ও পয়েন্ট কাটা যাবে।</span>
+                <span class="en">Press the lever. If green, food drops and score increases (+10). If red, hamster
+                  shivers and score decreases (-10).</span>
+              </div>
+            </div>
+            <a href="theories.html" class="launch-link"><span class="bn">লঞ্চ করুন ➔</span><span class="en">Launch
+                ➔</span></a>
+          </div>
+        </div>
+
+        <!-- Model 2: Cognitivism -->
+        <div class="accordion-item">
+          <button class="accordion-header" onclick="toggleAccordion(this)">
+            <span class="bn">২. কগনিটিভিজম (Memory Chunking)</span>
+            <span class="en">2. Cognitivism (Memory Chunking)</span>
+          </button>
+          <div class="accordion-content">
+            <div class="model-info-grid">
+              <div class="info-box">
+                <div class="info-box-title"><span class="bn">যা সিমুলেট করে</span><span class="en">What it
+                    simulates</span></div>
+                <span class="bn">মানুষের স্বল্পমেয়াদী স্মৃতির সীমাবদ্ধতা (৭±২ তথ্যখণ্ড) এবং অংশ ভাগ (Chunking) করার
+                  ক্ষমতা।</span>
+                <span class="en">Short-term memory limits (7±2 chunks) and the power of chunking to reduce cognitive
+                  load.</span>
+              </div>
+              <div class="info-box">
+                <div class="info-box-title"><span class="bn">কীভাবে ব্যবহার করবেন</span><span class="en">How to
+                    interact</span></div>
+                <span class="bn">৮-ডিজিটের সংখ্যা সিঙ্গেল বা চ্যাঙ্কড (যেমন ৯৮২-৭০১-৪৬) মোডে ফ্ল্যাশ করে মেমোরি পরীক্ষা
+                  করুন।</span>
+                <span class="en">Flash an 8-digit sequence either as a single block or chunked in sets to test recall
+                  accuracy.</span>
+              </div>
+            </div>
+            <a href="theories.html" class="launch-link"><span class="bn">লঞ্চ করুন ➔</span><span class="en">Launch
+                ➔</span></a>
+          </div>
+        </div>
+
+        <!-- Model 3: Constructivism -->
+        <div class="accordion-item">
+          <button class="accordion-header" onclick="toggleAccordion(this)">
+            <span class="bn">৩. কনস্ট্রাক্টিভিজম (Schema Fit)</span>
+            <span class="en">3. Constructivism (Schema Fit)</span>
+          </button>
+          <div class="accordion-content">
+            <div class="model-info-grid">
+              <div class="info-box">
+                <div class="info-box-title"><span class="bn">যা সিমুলেট করে</span><span class="en">What it
+                    simulates</span></div>
+                <span class="bn">অ্যাসিমিলিয়েশন ও অ্যাকোমোডেশনের মাধ্যমে মানসিক ধারণা বা স্কিমা (Schema) পরিবর্তন
+                  করা।</span>
+                <span class="en">Updating mental schemas through Assimilation and Accommodation when facing new
+                  anomalies.</span>
+              </div>
+              <div class="info-box">
+                <div class="info-box-title"><span class="bn">কীভাবে ব্যবহার করবেন</span><span class="en">How to
+                    interact</span></div>
+                <span class="bn">বাদুড় ও পেঙ্গুইনকে স্তন্যপায়ী ও পাখি ফোল্ডারে টানুন। দ্বন্দ তৈরি হলে স্কিমা
+                  রি-অর্গানাইজ করুন।</span>
+                <span class="en">Drag Bat/Penguin to Mammal/Bird folders. Upon cognitive dissonance, click "Accommodate"
+                  to update categories.</span>
+              </div>
+            </div>
+            <a href="theories.html" class="launch-link"><span class="bn">লঞ্চ করুন ➔</span><span class="en">Launch
+                ➔</span></a>
+          </div>
+        </div>
+
+        <!-- Model 4: Social Constructivism -->
+        <div class="accordion-item">
+          <button class="accordion-header" onclick="toggleAccordion(this)">
+            <span class="bn">৪. সামাজিক কনস্ট্রাক্টিভিজম (ZPD Scaffolding)</span>
+            <span class="en">4. Social Constructivism (ZPD Scaffolding)</span>
+          </button>
+          <div class="accordion-content">
+            <div class="model-info-grid">
+              <div class="info-box">
+                <div class="info-box-title"><span class="bn">যা সিমুলেট করে</span><span class="en">What it
+                    simulates</span></div>
+                <span class="bn">সহায়তাকারীর সাহায্য নিয়ে ZPD (Zone of Proximal Development) সীমার মধ্যে কঠিন কাজ সমাধান
+                  করা।</span>
+                <span class="en">Learning in the Zone of Proximal Development with progressive teacher support
+                  (Scaffolding).</span>
+              </div>
+              <div class="info-box">
+                <div class="info-box-title"><span class="bn">কীভাবে ব্যবহার করবেন</span><span class="en">How to
+                    interact</span></div>
+                <span class="bn">ধারাবাহিক সংখ্যা ধাঁধার উত্তর দিতে না পারলে শিক্ষক রোবটের কাছ থেকে ধাপে ধাপে সংকেত
+                  (Hints) নিন।</span>
+                <span class="en">Solve the math pattern. If stuck, click "Request Hint" to get step-by-step
+                  guidance.</span>
+              </div>
+            </div>
+            <a href="theories.html" class="launch-link"><span class="bn">লঞ্চ করুন ➔</span><span class="en">Launch
+                ➔</span></a>
+          </div>
+        </div>
+
+        <!-- Model 5: Social Learning -->
+        <div class="accordion-item">
+          <button class="accordion-header" onclick="toggleAccordion(this)">
+            <span class="bn">৫. সামাজিক শিক্ষণ তত্ত্ব (Observational Imitation)</span>
+            <span class="en">5. Social Learning (Observational Imitation)</span>
+          </button>
+          <div class="accordion-content">
+            <div class="model-info-grid">
+              <div class="info-box">
+                <div class="info-box-title"><span class="bn">যা সিমুলেট করে</span><span class="en">What it
+                    simulates</span></div>
+                <span class="bn">আরেকজনের কর্মকাণ্ড পর্যবেক্ষণ এবং মনোযোগের মাধ্যমে নতুন আচরণ অনুকরণ করা।</span>
+                <span class="en">Observational learning and behavioral reproduction of modeled sequences.</span>
+              </div>
+              <div class="info-box">
+                <div class="info-box-title"><span class="bn">কীভাবে ব্যবহার করবেন</span><span class="en">How to
+                    interact</span></div>
+                <span class="bn">মেন্টর রোবটের ফ্লাশিং প্যাটার্ন মন দিয়ে দেখুন এবং একই সুর ও আলোর অনুক্রম বোতামে চাপ
+                  দিয়ে মেলান।</span>
+                <span class="en">Watch the robot mentor flash colored buttons, and mimic the pattern sequence
+                  exactly.</span>
+              </div>
+            </div>
+            <a href="theories.html" class="launch-link"><span class="bn">লঞ্চ করুন ➔</span><span class="en">Launch
+                ➔</span></a>
+          </div>
+        </div>
+
+        <!-- Model 6: Humanism -->
+        <div class="accordion-item">
+          <button class="accordion-header" onclick="toggleAccordion(this)">
+            <span class="bn">৬. মানবতাবাদ (Growth Garden)</span>
+            <span class="en">6. Humanism (Growth Garden)</span>
+          </button>
+          <div class="accordion-content">
+            <div class="model-info-grid">
+              <div class="info-box">
+                <div class="info-box-title"><span class="bn">যা সিমুলেট করে</span><span class="en">What it
+                    simulates</span></div>
+                <span class="bn">ব্যক্তিস্বাধীনতা ও ভয়হীন স্ব-প্রণোদিত শিক্ষণ যা আত্ম-উন্নয়নে সাহায্য করে।</span>
+                <span class="en">Intrinsically motivated, pressure-free learning tailored to individual learner
+                  autonomy.</span>
+              </div>
+              <div class="info-box">
+                <div class="info-box-title"><span class="bn">কীভাবে ব্যবহার করবেন</span><span class="en">How to
+                    interact</span></div>
+                <span class="bn">নিজের পছন্দের পড়া বেছে নিন, পানি ঢেলে চারা গাছ বড় করুন এবং কোনো ভুল বা শাস্তি ছাড়াই ফুল
+                  ফোটান।</span>
+                <span class="en">Select your learning topic, water the sprout, and grow a self-actualized plant.</span>
+              </div>
+            </div>
+            <a href="theories.html" class="launch-link"><span class="bn">লঞ্চ করুন ➔</span><span class="en">Launch
+                ➔</span></a>
+          </div>
+        </div>
+
+        <!-- Model 7: Experiential Learning -->
+        <div class="accordion-item">
+          <button class="accordion-header" onclick="toggleAccordion(this)">
+            <span class="bn">৭. অভিজ্ঞতামূলক শিক্ষা (Kolb Rocket Cycle)</span>
+            <span class="en">7. Experiential (Kolb Rocket Cycle)</span>
+          </button>
+          <div class="accordion-content">
+            <div class="model-info-grid">
+              <div class="info-box">
+                <div class="info-box-title"><span class="bn">যা সিমুলেট করে</span><span class="en">What it
+                    simulates</span></div>
+                <span class="bn">কল্ব-এর ৪টি চক্র: বাস্তব অভিজ্ঞতা ➔ প্রতিফলন ➔ ধারণা ➔ পরীক্ষা।</span>
+                <span class="en">Kolb's 4-stage learning cycle: Concrete Experience, Reflection, Theory, and
+                  Experiment.</span>
+              </div>
+              <div class="info-box">
+                <div class="info-box-title"><span class="bn">কীভাবে ব্যবহার করবেন</span><span class="en">How to
+                    interact</span></div>
+                <span class="bn">রকেট লাঞ্চ করুন, ক্র্যাশ পর্যবেক্ষণ করুন, ৪৫° প্রজেক্টাইল তত্ত্ব পড়ুন, এবং নতুন কোণে
+                  রকেট ছুড়ে লক্ষ্য ভেদ করুন।</span>
+                <span class="en">Launch a rocket, observe path metrics, read maximum range theories, set angle to 45°,
+                  and hit target.</span>
+              </div>
+            </div>
+            <a href="theories.html" class="launch-link"><span class="bn">লঞ্চ করুন ➔</span><span class="en">Launch
+                ➔</span></a>
+          </div>
+        </div>
+
+        <!-- Model 8: Connectivism -->
+        <div class="accordion-item">
+          <button class="accordion-header" onclick="toggleAccordion(this)">
+            <span class="bn">৮. কানেক্টিভিজম (Learning Network Web)</span>
+            <span class="en">8. Connectivism (Learning Network Web)</span>
+          </button>
+          <div class="accordion-content">
+            <div class="model-info-grid">
+              <div class="info-box">
+                <div class="info-box-title"><span class="bn">যা সিমুলেট করে</span><span class="en">What it
+                    simulates</span></div>
+                <span class="bn">ডিজিটাল ও সামাজিক সংযোগ নেটওয়ার্কিং ব্যবহার করে আধুনিক তথ্য খুঁজে নেওয়ার
+                  প্রক্রিয়া।</span>
+                <span class="en">Learning as a networking process connecting nodes of information (Wikipedia, peers,
+                  blogs).</span>
+              </div>
+              <div class="info-box">
+                <div class="info-box-title"><span class="bn">কীভাবে ব্যবহার করবেন</span><span class="en">How to
+                    interact</span></div>
+                <span class="bn">জটিল প্রশ্নের সমাধান পেতে উইকিপিডিয়া, ইউটিউব এবং সহপাঠী নোডগুলোকে তার দিয়ে সংযুক্ত
+                  করুন।</span>
+                <span class="en">Connect node points (Wikipedia, peers, YouTube) to the central student to enable
+                  knowledge flow.</span>
+              </div>
+            </div>
+            <a href="theories.html" class="launch-link"><span class="bn">লঞ্চ করুন ➔</span><span class="en">Launch
+                ➔</span></a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- GROUP 2: SCIENCE LABS -->
+      <div class="dir-group">
+        <h3>
+          <span class="bn">বিজ্ঞান ল্যাবের ১৪টি মডেল</span>
+          <span class="en">14 Science Lab Models</span>
+        </h3>
+
+        <!-- Ch 1: Force -->
+        <div class="accordion-item">
+          <button class="accordion-header" onclick="toggleAccordion(this)">
+            <span class="bn"> অধ্যায় ১: বল, চাপ ও শক্তি (Pressure Gauge)</span>
+            <span class="en"> Chapter 1: Force, Pressure & Energy</span>
+          </button>
+          <div class="accordion-content">
+            <div class="model-info-grid">
+              <div class="info-box">
+                <div class="info-box-title"><span class="bn">যা সিমুলেট করে</span><span class="en">What it
+                    simulates</span></div>
+                <span class="bn">চাপের সাথে ক্ষেত্রফল ও বলের গাণিতিক সম্পর্ক ($P = F/A$)।</span>
+                <span class="en">The relation of pressure ($P$) to force ($F$) and contact area ($A$) ($P =
+                  F/A$).</span>
+              </div>
+              <div class="info-box">
+                <div class="info-box-title"><span class="bn">কীভাবে ব্যবহার করবেন</span><span class="en">How to
+                    interact</span></div>
+                <span class="bn">বল ও ক্ষেত্রফলের স্লাইডার নাড়ান। চাপ ১৫ পাস্কাল ছাড়ালে কুশন ফেটে যাওয়ার এলার্ট
+                  আসবে।</span>
+                <span class="en">Slide Force/Area. The piston deforms a foam cushion; pressures above 15 Pa will crack
+                  it.</span>
+              </div>
+            </div>
+            <a href="science_ch1.html" class="launch-link"><span class="bn">লঞ্চ করুন ➔</span><span class="en">Launch
+                ➔</span></a>
+          </div>
+        </div>
+
+        <!-- Ch 2: Heat -->
+        <div class="accordion-item">
+          <button class="accordion-header" onclick="toggleAccordion(this)">
+            <span class="bn"> অধ্যায় ২: তাপ ও তাপমাত্রা (Kinetic Gas Speed)</span>
+            <span class="en"> Chapter 2: Heat & Temperature</span>
+          </button>
+          <div class="accordion-content">
+            <div class="model-info-grid">
+              <div class="info-box">
+                <div class="info-box-title"><span class="bn">যা সিমুলেট করে</span><span class="en">What it
+                    simulates</span></div>
+                <span class="bn">তাপমাত্রার সাথে কণার এলোমেলো গতি এবং সেলসিয়াস, ফারেনহাইট ও কেলভিনের রূপান্তর।</span>
+                <span class="en">Molecular kinetic speeds vs Kelvin, Celsius, and Fahrenheit scale conversions.</span>
+              </div>
+              <div class="info-box">
+                <div class="info-box-title"><span class="bn">কীভাবে ব্যবহার করবেন</span><span class="en">How to
+                    interact</span></div>
+                <span class="bn">তাপমাত্রা স্লাইডার নাড়ান, কণার বেগ বাড়বে এবং থার্মোমিটারে অন্যান্য স্কেলের মান
+                  দেখাবে।</span>
+                <span class="en">Adjust temperature. Molecules bounce faster (hot) or slower (cold). View scale
+                  conversions.</span>
+              </div>
+            </div>
+            <a href="science_ch2.html" class="launch-link"><span class="bn">লঞ্চ করুন ➔</span><span class="en">Launch
+                ➔</span></a>
+          </div>
+        </div>
+
+        <!-- Ch 3: Photoelectric -->
+        <div class="accordion-item">
+          <button class="accordion-header" onclick="toggleAccordion(this)">
+            <span class="bn"> অধ্যায় ৩: আধুনিক পদার্থবিজ্ঞান (Photoelectric Effect)</span>
+            <span class="en"> Chapter 3: Modern Physics</span>
+          </button>
+          <div class="accordion-content">
+            <div class="model-info-grid">
+              <div class="info-box">
+                <div class="info-box-title"><span class="bn">যা সিমুলেট করে</span><span class="en">What it
+                    simulates</span></div>
+                <span class="bn">কোয়ান্টাম আলোক কণার শক্তি ও ফোটোতড়িৎ প্রবাহের সূচনা ($E = h\nu - \Phi$)।</span>
+                <span class="en">The photoelectric effect and photon energy work-function thresholds.</span>
+              </div>
+              <div class="info-box">
+                <div class="info-box-title"><span class="bn">কীভাবে ব্যবহার করবেন</span><span class="en">How to
+                    interact</span></div>
+                <span class="bn">আলোর তরঙ্গদৈর্ঘ্য ৫৩৯ ন্যানোমিটারের নিচে কমিয়ে সবুজ-নীল আলো ফেলে ইলেকট্রন প্রবাহ
+                  ট্রিগার করুন।</span>
+                <span class="en">Slide wavelength below 539 nm (threshold) to cause photons to release current
+                  electrons.</span>
+              </div>
+            </div>
+            <a href="science_ch3.html" class="launch-link"><span class="bn">লঞ্চ করুন ➔</span><span class="en">Launch
+                ➔</span></a>
+          </div>
+        </div>
+
+        <!-- Ch 4: Phase -->
+        <div class="accordion-item">
+          <button class="accordion-header" onclick="toggleAccordion(this)">
+            <span class="bn"> অধ্যায় ৪: পদার্থের অবস্থা (Phase Transition)</span>
+            <span class="en"> Chapter 4: States of Matter</span>
+          </button>
+          <div class="accordion-content">
+            <div class="model-info-grid">
+              <div class="info-box">
+                <div class="info-box-title"><span class="bn">যা সিমুলেট করে</span><span class="en">What it
+                    simulates</span></div>
+                <span class="bn">কঠিন (ক্রিস্টাল ল্যাটিস), তরল (প্রবাহ) ও গ্যাসীয় (এলোমেলো) দশার আণবিক রূপান্তর।</span>
+                <span class="en">Solid lattice, liquid flow, and gas bounce particle configurations.</span>
+              </div>
+              <div class="info-box">
+                <div class="info-box-title"><span class="bn">কীভাবে ব্যবহার করবেন</span><span class="en">How to
+                    interact</span></div>
+                <span class="bn">তাপমাত্রা স্লাইড করে কঠিন থেকে তরলে এবং গ্যাসীয় উড্ডয়ন কণার রূপান্তর পর্যবেক্ষণ
+                  করুন।</span>
+                <span class="en">Slide heat level from Solid to Liquid and Gas phases to observe structural
+                  packing.</span>
+              </div>
+            </div>
+            <a href="science_ch4.html" class="launch-link"><span class="bn">লঞ্চ করুন ➔</span><span class="en">Launch
+                ➔</span></a>
+          </div>
+        </div>
+
+        <!-- Ch 5: Atom Builder -->
+        <div class="accordion-item">
+          <button class="accordion-header" onclick="toggleAccordion(this)">
+            <span class="bn"> অধ্যায় ৫: পদার্থের গঠন (Bohr Atom Builder)</span>
+            <span class="en"> Chapter 5: Structure of Matter</span>
+          </button>
+          <div class="accordion-content">
+            <div class="model-info-grid">
+              <div class="info-box">
+                <div class="info-box-title"><span class="bn">যা সিমুলেট করে</span><span class="en">What it
+                    simulates</span></div>
+                <span class="bn">বোরের কক্ষপথ যোজনী বিন্যাস ($2n^2$) এবং পরমাণুর মোট চার্জ (আয়ন)।</span>
+                <span class="en">Bohr orbits ($2n^2$) and net ionic charges of elements based on subatomic count.</span>
+              </div>
+              <div class="info-box">
+                <div class="info-box-title"><span class="bn">কীভাবে ব্যবহার করবেন</span><span class="en">How to
+                    interact</span></div>
+                <span class="bn">প্রোটন ও ইলেকট্রন সংখ্যা বাড়িয়ে হাইড্রোজেন, হিলিয়াম বা কার্বন তৈরি করে যোজনী মিল
+                  দেখান।</span>
+                <span class="en">Slide proton/electron counts. Orbitals populate and name elements (H, He, Li, Be,
+                  C).</span>
+              </div>
+            </div>
+            <a href="science_ch5.html" class="launch-link"><span class="bn">লঞ্চ করুন ➔</span><span class="en">Launch
+                ➔</span></a>
+          </div>
+        </div>
+
+        <!-- Ch 6: Periodic -->
+        <div class="accordion-item">
+          <button class="accordion-header" onclick="toggleAccordion(this)">
+            <span class="bn"> অধ্যায় ৬: পর্যায় সারণি (Element Explorer)</span>
+            <span class="en"> Chapter 6: Periodic Table</span>
+          </button>
+          <div class="accordion-content">
+            <div class="model-info-grid">
+              <div class="info-box">
+                <div class="info-box-title"><span class="bn">যা সিমুলেট করে</span><span class="en">What it
+                    simulates</span></div>
+                <span class="bn">পর্যায় ও গ্রুপ বিন্যাস, এবং ক্ষার ধাতু সমূহের সক্রিয় রাসায়নিক বিক্রিয়া।</span>
+                <span class="en">Atomic properties, groups, periods, and alkali metal reactivity trends.</span>
+              </div>
+              <div class="info-box">
+                <div class="info-box-title"><span class="bn">কীভাবে ব্যবহার করবেন</span><span class="en">How to
+                    interact</span></div>
+                <span class="bn">গ্রিডের যেকোনো মৌলে ট্যাপ করে বৈশিষ্ট্য জানুন। সোডিয়াম বোতাম চেপে পানিতে Na বিস্ফোরণ
+                  দেখুন।</span>
+                <span class="en">Tap grid elements to display properties. Click "Drop Na" for sodium-water reaction
+                  details.</span>
+              </div>
+            </div>
+            <a href="science_ch6.html" class="launch-link"><span class="bn">লঞ্চ করুন ➔</span><span class="en">Launch
+                ➔</span></a>
+          </div>
+        </div>
+
+        <!-- Ch 7: Bonding -->
+        <div class="accordion-item">
+          <button class="accordion-header" onclick="toggleAccordion(this)">
+            <span class="bn"> অধ্যায় ৭: রাসায়নিক বন্ধন (Bond Constructor)</span>
+            <span class="en"> Chapter 7: Chemical Bonds</span>
+          </button>
+          <div class="accordion-content">
+            <div class="model-info-grid">
+              <div class="info-box">
+                <div class="info-box-title"><span class="bn">যা সিমুলেট করে</span><span class="en">What it
+                    simulates</span></div>
+                <span class="bn">আয়নিক বন্ধনে ইলেকট্রন স্থানান্তর (NaCl) এবং সমযোজী বন্ধনে ইলেকট্রন জোড় ভাগাভাগি
+                  (H₂O)।</span>
+                <span class="en">Ionic transfer (NaCl, forming ions) and covalent electron pair sharing (water,
+                  overlapping).</span>
+              </div>
+              <div class="info-box">
+                <div class="info-box-title"><span class="bn">কীভাবে ব্যবহার করবেন</span><span class="en">How to
+                    interact</span></div>
+                <span class="bn">আয়নিক বা সমযোজী বোতাম টিপুন। ইলেকট্রন স্থানান্তরের পথ ও বন্ধন স্থির হওয়া পর্যবেক্ষণ
+                  করুন।</span>
+                <span class="en">Click Ionic (valence electron transfers to chlorine) or Covalent (H and O share
+                  pairs).</span>
+              </div>
+            </div>
+            <a href="science_ch7.html" class="launch-link"><span class="bn">লঞ্চ করুন ➔</span><span class="en">Launch
+                ➔</span></a>
+          </div>
+        </div>
+
+        <!-- Ch 8: Genetics -->
+        <div class="accordion-item">
+          <button class="accordion-header" onclick="toggleAccordion(this)">
+            <span class="bn"> অধ্যায় ৮: জিনতত্ত্ব ও বংশগতি (Punnett Square)</span>
+            <span class="en"> Chapter 8: Genetics & Heredity</span>
+          </button>
+          <div class="accordion-content">
+            <div class="model-info-grid">
+              <div class="info-box">
+                <div class="info-box-title"><span class="bn">যা সিমুলেট করে</span><span class="en">What it
+                    simulates</span></div>
+                <span class="bn">মেন্ডেলের বংশগতি নীতি এবং প্রকট ও প্রচ্ছন্ন অ্যালিল সংমিশ্রণ সম্ভাবনা।</span>
+                <span class="en">Mendelian inheritance grids, dominant alleles ($T$), and recessive alleles
+                  ($t$).</span>
+              </div>
+              <div class="info-box">
+                <div class="info-box-title"><span class="bn">কীভাবে ব্যবহার করবেন</span><span class="en">How to
+                    interact</span></div>
+                <span class="bn">মাতা ও পিতার জিনোটাইপ নির্ধারণ করুন। পুনেট স্কয়ার ফেনোটাইপ অনুপাত হিসাব করবে।</span>
+                <span class="en">Select parent height genotypes (Tt, TT, tt). Calculate height phenotype ratios.</span>
+              </div>
+            </div>
+            <a href="science_ch8.html" class="launch-link"><span class="bn">লঞ্চ করুন ➔</span><span class="en">Launch
+                ➔</span></a>
+          </div>
+        </div>
+
+        <!-- Ch 9: Biomolecules -->
+        <div class="accordion-item">
+          <button class="accordion-header" onclick="toggleAccordion(this)">
+            <span class="bn"> অধ্যায় ৯: জৈব অণু (Nutritional Sorting)</span>
+            <span class="en"> Chapter 9: Biomolecules</span>
+          </button>
+          <div class="accordion-content">
+            <div class="model-info-grid">
+              <div class="info-box">
+                <div class="info-box-title"><span class="bn">যা সিমুলেট করে</span><span class="en">What it
+                    simulates</span></div>
+                <span class="bn">খাদ্যের পুষ্টি উপাদান শর্করা (Carbs), আমিষ (Proteins) এবং স্নেহ (Lipids) এর
+                  বিন্যাস।</span>
+                <span class="en">Categorization of food groups into Carbohydrates, Proteins, and Lipids.</span>
+              </div>
+              <div class="info-box">
+                <div class="info-box-title"><span class="bn">কীভাবে ব্যবহার করবেন</span><span class="en">How to
+                    interact</span></div>
+                <span class="bn">ভাত, ডিম, মাখন প্রভৃতি খাবারের চিপ টেনে সঠিক পুষ্টি কোঠায় ফেলুন। ক্যালোরি হিসাব
+                  করুন।</span>
+                <span class="en">Drag food chips (Rice, Potato, Fish, Egg, Oil, Butter) into correct folders. Use
+                  calorie meter.</span>
+              </div>
+            </div>
+            <a href="science_ch9.html" class="launch-link"><span class="bn">লঞ্চ করুন ➔</span><span class="en">Launch
+                ➔</span></a>
+          </div>
+        </div>
+
+        <!-- Ch 10: Photosynthesis -->
+        <div class="accordion-item">
+          <button class="accordion-header" onclick="toggleAccordion(this)">
+            <span class="bn"> অধ্যায় ১০: সালোকসংশ্লেষণ (Leaf Chloroplast)</span>
+            <span class="en"> Chapter 10: Photosynthesis</span>
+          </button>
+          <div class="accordion-content">
+            <div class="model-info-grid">
+              <div class="info-box">
+                <div class="info-box-title"><span class="bn">যা সিমুলেট করে</span><span class="en">What it
+                    simulates</span></div>
+                <span class="bn">আলো, পানি ও CO₂ রাসায়নিক রূপান্তর ঘটিয়ে গ্লুকোজ ও অক্সিজেন তৈরি করার হার।</span>
+                <span class="en">Leaf chloroplast reactions converting $CO_2$, water, and light into glucose and
+                  oxygen.</span>
+              </div>
+              <div class="info-box">
+                <div class="info-box-title"><span class="bn">কীভাবে ব্যবহার করবেন</span><span class="en">How to
+                    interact</span></div>
+                <span class="bn">আলোর তীব্রতা ও CO₂ ঘনত্ব স্লাইডার বাড়ান। কণা রূপান্তরের বেগ বৃদ্ধি পাবে।</span>
+                <span class="en">Raise Light and CO₂ intensity sliders. Oxygen bubble release rates will speed
+                  up.</span>
+              </div>
+            </div>
+            <a href="science_ch10.html" class="launch-link"><span class="bn">লঞ্চ করুন ➔</span><span class="en">Launch
+                ➔</span></a>
+          </div>
+        </div>
+
+        <!-- Ch 11: Body systems -->
+        <div class="accordion-item">
+          <button class="accordion-header" onclick="toggleAccordion(this)">
+            <span class="bn"> অধ্যায় ১১: মানব শরীরের তন্ত্র (BPM Pulse Rate)</span>
+            <span class="en"> Chapter 11: Human Organ Systems</span>
+          </button>
+          <div class="accordion-content">
+            <div class="model-info-grid">
+              <div class="info-box">
+                <div class="info-box-title"><span class="bn">যা সিমুলেট করে</span><span class="en">What it
+                    simulates</span></div>
+                <span class="bn">রক্ত সংবহন তন্ত্র ও হৃদস্পন্দন পরিমাপ করার পদ্ধতি (Beats Per Minute)।</span>
+                <span class="en">Cardiovascular circulatory pulse tracking and BPM calculations.</span>
+              </div>
+              <div class="info-box">
+                <div class="info-box-title"><span class="bn">কীভাবে ব্যবহার করবেন</span><span class="en">How to
+                    interact</span></div>
+                <span class="bn">হৃদপিণ্ড আইকনের ওপর ক্লিক করুন। প্রতি ক্লিকের সময়ের ব্যবধানে BPM লাইভ দেখাবে।</span>
+                <span class="en">Tap the heart pad repeatedly. The system evaluates click intervals to estimate heart
+                  rate.</span>
+              </div>
+            </div>
+            <a href="science_ch11.html" class="launch-link"><span class="bn">লঞ্চ করুন ➔</span><span class="en">Launch
+                ➔</span></a>
+          </div>
+        </div>
+
+        <!-- Ch 12: Ecosystem -->
+        <div class="accordion-item">
+          <button class="accordion-header" onclick="toggleAccordion(this)">
+            <span class="bn"> অধ্যায় ১২: বাস্তুতন্ত্র (Food Chain Flow)</span>
+            <span class="en"> Chapter 12: Ecosystems</span>
+          </button>
+          <div class="accordion-content">
+            <div class="model-info-grid">
+              <div class="info-box">
+                <div class="info-box-title"><span class="bn">যা সিমুলেট করে</span><span class="en">What it
+                    simulates</span></div>
+                <span class="bn">খাদ্য শৃঙ্খল ও লিন্ডেম্যানের ১০% ট্রফিক স্তরের শক্তি স্থানান্তরের সূত্র।</span>
+                <span class="en">Trophic level connections and the 10% ecological energy transfer rule.</span>
+              </div>
+              <div class="info-box">
+                <div class="info-box-title"><span class="bn">কীভাবে ব্যবহার করবেন</span><span class="en">How to
+                    interact</span></div>
+                <span class="bn">ঘাস ➔ পোকা ➔ ব্যাঙ ➔ সাপ ক্রমানুসারে মৌলগুলো নির্বাচন করে চেইন সম্পূর্ণ করুন।</span>
+                <span class="en">Click food chain nodes in correct order (Grass ➔ Insect ➔ Frog ➔ Snake) to enable
+                  flow.</span>
+              </div>
+            </div>
+            <a href="science_ch12.html" class="launch-link"><span class="bn">লঞ্চ করুন ➔</span><span class="en">Launch
+                ➔</span></a>
+          </div>
+        </div>
+
+        <!-- Ch 13: Kepler -->
+        <div class="accordion-item">
+          <button class="accordion-header" onclick="toggleAccordion(this)">
+            <span class="bn"> অধ্যায় ১৩: পৃথিবী ও মহাবিশ্ব (Elliptical Orbit)</span>
+            <span class="en"> Chapter 13: Earth & Universe</span>
+          </button>
+          <div class="accordion-content">
+            <div class="model-info-grid">
+              <div class="info-box">
+                <div class="info-box-title"><span class="bn">যা সিমুলেট করে</span><span class="en">What it
+                    simulates</span></div>
+                <span class="bn">কেপলারের গ্রহের গতিসূত্র ও গ্রহের অরবিটালে বেগের প্রভাব (মহাকর্ষ বনাম বেগ)।</span>
+                <span class="en">Kepler gravity elliptical orbits and planetary escape velocities.</span>
+              </div>
+              <div class="info-box">
+                <div class="info-box-title"><span class="bn">কীভাবে ব্যবহার করবেন</span><span class="en">How to
+                    interact</span></div>
+                <span class="bn">কক্ষপথীয় বেগের স্লাইডার পরিবর্তন করে ক্র্যাশ বা কক্ষপথচ্যুতির সীমা খুঁজুন।</span>
+                <span class="en">Vary orbit launch speed. Speeds <18 crash into sun; speeds>48 escape gravity.</span>
+              </div>
+            </div>
+            <a href="science_ch13.html" class="launch-link"><span class="bn">লঞ্চ করুন ➔</span><span class="en">Launch
+                ➔</span></a>
+          </div>
+        </div>
+
+        <!-- Ch 14: Deforestation -->
+        <div class="accordion-item">
+          <button class="accordion-header" onclick="toggleAccordion(this)">
+            <span class="bn"> অধ্যায় ১৪: পরিবেশ ও ভূমিরূপ (Soil Erosion)</span>
+            <span class="en"> Chapter 14: Environment & Landforms</span>
+          </button>
+          <div class="accordion-content">
+            <div class="model-info-grid">
+              <div class="info-box">
+                <div class="info-box-title"><span class="bn">যা সিমুলেট করে</span><span class="en">What it
+                    simulates</span></div>
+                <span class="bn">উদ্ভিদের শিকড় দ্বারা মাটির কণাগুলোর বাঁধন ও বৃষ্টিতে মাটির ক্ষয় প্রতিরোধ।</span>
+                <span class="en">How forest root structures bind soil, preventing erosion from surface runoff.</span>
+              </div>
+              <div class="info-box">
+                <div class="info-box-title"><span class="bn">কীভাবে ব্যবহার করবেন</span><span class="en">How to
+                    interact</span></div>
+                <span class="bn">বৃষ্টি শুরু করুন। অনাবৃত ও বনায়ন মাটির ক্ষয় ও উচ্চতা পরিবর্তন লক্ষ্য করুন।</span>
+                <span class="en">Click "Start Rain". Watch bare soil erode to 0% while forested soil remains
+                  stable.</span>
+              </div>
+            </div>
+            <a href="science_ch14.html" class="launch-link"><span class="bn">লঞ্চ করুন ➔</span><span class="en">Launch
+                ➔</span></a>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+  </div>
+
+  <script>
+    let currentLang = 'bn';
+
+    function setLanguage(lang) {
+      currentLang = lang;
+      if (lang === 'bn') {
+        document.documentElement.classList.remove('lang-en');
+        document.documentElement.classList.add('lang-bn');
+      } else {
+        document.documentElement.classList.remove('lang-bn');
+        document.documentElement.classList.add('lang-en');
+      }
+    }
+
+    document.getElementById('langToggle').addEventListener('click', () => {
+      const nextLang = currentLang === 'bn' ? 'en' : 'bn';
+      setLanguage(nextLang);
+    });
+
+    // Accordion Expand / Collapse function
+    function toggleAccordion(button) {
+      const item = button.parentNode;
+      const isActive = item.classList.contains('active');
+
+      // Close other items
+      document.querySelectorAll('.accordion-item').forEach(i => i.classList.remove('active'));
+
+      if (!isActive) {
+        item.classList.add('active');
+      }
+    }
+  </script>
+</body>
+
+</html>

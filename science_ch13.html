@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="bn" class="lang-bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Earth & Universe · Class 9-10 Science Portal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@500;600&family=Tiro+Bangla&family=Hind+Siliguri:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="science_style.css">
+</head>
+<body>
+
+<div class="app-container">
+  
+  <!-- PERSISTENT SIDEBAR INJECTED VIA COMMON.JS -->
+  <div class="sidebar" id="sidebar"></div>
+
+  <!-- MAIN CHAPTER CONTENT -->
+  <main class="main-content">
+    
+    <header class="lesson-header">
+      <div class="lesson-meta">
+        <span class="subject-badge space">Space Science</span>
+        <span class="eyebrow">Chapter 13</span>
+      </div>
+      <h1>
+        <span class="bn">পৃথিবী ও মহাবিশ্ব</span>
+        <span class="en">Earth & Universe</span>
+      </h1>
+    </header>
+
+    <div class="grid2">
+      <!-- LEFT PANE: LESSONS, ACTIVITIES, EXTRA EXAMPLES, AND QUIZ -->
+      <div style="display:flex; flex-direction:column; gap:20px;">
+        <div class="content-pane">
+          <div class="tab-nav">
+            <button class="tab-btn active" onclick="switchTab(this, 'lesson')">
+              <span class="bn">📖 মূল তথ্য</span><span class="en">📖 Core Info</span>
+            </button>
+            <button class="tab-btn" onclick="switchTab(this, 'activity')">
+              <span class="bn">🏫 শ্রেণিকক্ষ কার্যক্রম</span><span class="en">🏫 Activities</span>
+            </button>
+            <button class="tab-btn" onclick="switchTab(this, 'examples')">
+              <span class="bn">💡 আরও উদাহরণ</span><span class="en">💡 More Examples</span>
+            </button>
+            <button class="tab-btn" onclick="switchTab(this, 'quiz')" id="quizTabBtn">
+              <span class="bn">📝 কুইজ টেস্ট</span><span class="en">📝 Quiz Test</span>
+            </button>
+          </div>
+          
+          <!-- TAB 1: THEORY -->
+          <div class="tab-content active" id="tab-lesson">
+            <p class="lede" style="font-size:1.1rem; line-height:1.6; color:var(--cyan); margin-bottom:15px;">
+              <span class="bn">মহাকর্ষ বল ও গতিবেগের ভারসাম্যের ফলে গ্রহসমূহ সূর্যের চারদিকে উপবৃত্তাকার কক্ষপথে আবর্তিত হয়।</span>
+              <span class="en">Orbital velocity and gravitational attraction balance to drive planetary orbits.</span>
+            </p>
+            <div style="line-height:1.6; font-size:0.92rem; opacity:0.9;">
+              
+      <p class="bn"><b>১. মহাকর্ষ বল ও অরবিট:</b> মহাবিশ্বের যেকোনো দুটি বস্তুর পারস্পরিক আকর্ষণ বল হলো মহাকর্ষ বল। কেপলারের ১ম সূত্রানুযায়ী প্রতিটি গ্রহ সূর্যকে একটি ফোকাসে রেখে উপবৃত্তাকার কক্ষপথে ঘোরে। গ্রহের বেগ কম হলে তা সূর্যের দিকে পড়ে যাবে এবং অতিরিক্ত বেগ হলে তা মহাকর্ষ ছিন্ন করে মহাশূন্যে বিলীন হবে।</p>
+      <p class="en"><b>1. Orbital dynamics:</b> Kepler's first law defines orbits as elliptical. Low launch speed makes planets fall to the sun; excess speed causes escape velocity.</p>
+      <p class="bn"><b>২. বিগ ব্যাং ও মহাবিশ্বের প্রসারণ:</b> এডউইন হাবল প্রমাণ করেন যে মহাবিশ্ব ক্রমাগত প্রসারিত হচ্ছে। গ্যালাক্সিগুলো পারস্পরিক দূরত্ব বাড়াচ্ছে যা বিগ ব্যাং বা মহাবিস্ফোরণ তত্ত্বের অন্যতম বড় প্রমাণ।</p>
+      <p class="en"><b>2. Cosmic expansion:</b> Edwin Hubble proved that galaxies recede, indicating the universe expands.</p>
+    
+            </div>
+          </div>
+          
+          <!-- TAB 2: ACTIVITIES -->
+          <div class="tab-content" id="tab-activity">
+            <ul class="activity-list">
+              <li>
+                <span class="activity-tag">OUTCOME</span>
+                <strong><span class="bn">শিখনফল:</span><span class="en">Learning Outcome:</span></strong><br>
+                <span class="bn">কক্ষপথীয় গতিবেগ পরিবর্তনের সাথে গ্রহের স্থায়িত্ব এবং মহাকর্ষীয় টান বিশ্লেষণ করা।</span>
+                <span class="en">Verify planetary orbital stability limits using velocity values.</span>
+              </li>
+              <li>
+                <span class="activity-tag" style="background:rgba(95,224,224,0.15); color:var(--cyan);">ACTIVITY</span>
+                <strong><span class="bn">কার্যক্রম:</span><span class="en">Class Activity:</span></strong><br>
+                <span class="bn">গ্রহটির উৎক্ষেপণ বেগ বাড়িয়ে স্থিতিশীল উপবৃত্তাকার কক্ষপথের সীমা খুঁজুন।</span>
+                <span class="en">Adjust orbital launch speeds to find the window for stable ellipses.</span>
+              </li>
+            </ul>
+          </div>
+          
+          <!-- TAB 3: EXTRA EXAMPLES / CALCULATORS -->
+          <div class="tab-content" id="tab-examples">
+            
+      <div style="background:rgba(255,255,255,0.03); border:1px solid var(--line); padding:15px; border-radius:8px;">
+        <h4 style="margin-top:0; color:var(--chalk-yellow);"><span class="bn">⚖️ বিভিন্ন মহাজাগতিক বস্তুতে ওজন</span><span class="en">⚖️ Weight on Other Worlds</span></h4>
+        <p style="font-size:0.75rem; opacity:0.8;">
+          <span class="bn">পৃথিবীতে আপনার ওজন ৬০ কেজি হলে অন্যান্য গ্রহের অভিকর্ষজ ত্বরণের তারতম্যের কারণে ওজন কত হবে দেখুন:</span>
+          <span class="en">Compare your weight on different worlds (assuming 60kg on Earth):</span>
+        </p>
+        <div style="font-size:0.78rem; display:flex; flex-direction:column; gap:4px;">
+          <div>🌒 <b>Moon (চাঁদ):</b> 10 kg (1/6th gravity)</div>
+          <div>🔴 <b>Mars (মঙ্গল):</b> 22.8 kg (0.38g)</div>
+          <div>🪐 <b>Jupiter (বৃহস্পতি):</b> 151.8 kg (2.53g)</div>
+        </div>
+      </div>
+    
+          </div>
+          
+          <!-- TAB 4: QUIZ -->
+          <div class="tab-content" id="tab-quiz">
+            <div class="quiz-panel" id="quizPanel">
+              <!-- Quiz rendered dynamically by JS -->
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- RIGHT PANE: ANDROID DEVICE MOCKUP -->
+      <div>
+        <div class="android-device">
+          <div class="android-status-bar"><span class="time">09:42</span><div class="icons">📶 🔋 98%</div></div>
+          <div class="android-screen">
+            <div class="app-title-bar">
+              <span class="app-logo">☄️</span>
+              <span class="app-name">
+                <span class="bn">মহাকর্ষ অরবিট সিম</span>
+                <span class="en">Kepler Gravity Lab</span>
+              </span>
+            </div>
+            <div class="app-instruction">
+              <span class="bn">কক্ষপথীয় বেগ (Velocity) নিয়ন্ত্রণ করুন। বেগ ১৮ এর নিচে হলে গ্রহটি সূর্যের সাথে ধাক্কা খাবে এবং ৪৮ এর বেশি হলে কক্ষচ্যুত হবে।</span>
+              <span class="en">Vary launch speed. Below 18 crashes into the Sun; above 48 escapes orbit into deep space.</span>
+            </div>
+            
+            <!-- Simulation UI Container -->
+            
+      <div class="c13-orbit-field" id="c13Field">
+        <div class="c13-sun"></div>
+        <div class="c13-planet" id="c13Planet"></div>
+      </div>
+      <div style="margin-top:12px;">
+        <div class="p-slider-row">
+          <label><span>LAUNCH VELOCITY</span><b id="c13VVal">30</b></label>
+          <input type="range" class="p-slider" id="c13V" min="5" max="60" value="30">
+        </div>
+      </div>
+      <div class="gauge-wrap" style="margin-top:10px; font-size:0.7rem; text-align:center;" id="c13Status">
+        Orbit is Stable
+      </div>
+    
+            
+          </div>
+          <div class="android-nav-bar">
+            <div class="back" onclick="history.back()"></div>
+            <div class="home" onclick="window.location.href='science.html'"></div>
+            <div class="recents"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+</div>
+
+<script src="science_common.js"></script>
+<script>
+  // Simple tab switching logic
+  function switchTab(btn, tabId) {
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById('tab-' + tabId).classList.add('active');
+    
+    // Play a click tick
+    AudioFX.init();
+  }
+</script>
+<script src="science_ch13.js"></script>
+</body>
+</html>

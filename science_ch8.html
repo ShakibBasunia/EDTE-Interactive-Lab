@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="bn" class="lang-bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Genetics & Heredity · Class 9-10 Science Portal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@500;600&family=Tiro+Bangla&family=Hind+Siliguri:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="science_style.css">
+</head>
+<body>
+
+<div class="app-container">
+  
+  <!-- PERSISTENT SIDEBAR INJECTED VIA COMMON.JS -->
+  <div class="sidebar" id="sidebar"></div>
+
+  <!-- MAIN CHAPTER CONTENT -->
+  <main class="main-content">
+    
+    <header class="lesson-header">
+      <div class="lesson-meta">
+        <span class="subject-badge biology">Biology</span>
+        <span class="eyebrow">Chapter 08</span>
+      </div>
+      <h1>
+        <span class="bn">জিনতত্ত্ব ও বংশগতি</span>
+        <span class="en">Genetics & Heredity</span>
+      </h1>
+    </header>
+
+    <div class="grid2">
+      <!-- LEFT PANE: LESSONS, ACTIVITIES, EXTRA EXAMPLES, AND QUIZ -->
+      <div style="display:flex; flex-direction:column; gap:20px;">
+        <div class="content-pane">
+          <div class="tab-nav">
+            <button class="tab-btn active" onclick="switchTab(this, 'lesson')">
+              <span class="bn">📖 মূল তথ্য</span><span class="en">📖 Core Info</span>
+            </button>
+            <button class="tab-btn" onclick="switchTab(this, 'activity')">
+              <span class="bn">🏫 শ্রেণিকক্ষ কার্যক্রম</span><span class="en">🏫 Activities</span>
+            </button>
+            <button class="tab-btn" onclick="switchTab(this, 'examples')">
+              <span class="bn">💡 আরও উদাহরণ</span><span class="en">💡 More Examples</span>
+            </button>
+            <button class="tab-btn" onclick="switchTab(this, 'quiz')" id="quizTabBtn">
+              <span class="bn">📝 কুইজ টেস্ট</span><span class="en">📝 Quiz Test</span>
+            </button>
+          </div>
+          
+          <!-- TAB 1: THEORY -->
+          <div class="tab-content active" id="tab-lesson">
+            <p class="lede" style="font-size:1.1rem; line-height:1.6; color:var(--cyan); margin-bottom:15px;">
+              <span class="bn">পিতা-মাতার বৈশিষ্ট্যাবলী ক্রোমোজোমে অবস্থিত জিন (DNA) এর মাধ্যমে পরবর্তী প্রজন্মে সঞ্চারিত হয়।</span>
+              <span class="en">Inherited traits transfer to offspring via chromosomal DNA structures following Mendelian ratios.</span>
+            </p>
+            <div style="line-height:1.6; font-size:0.92rem; opacity:0.9;">
+              
+      <p class="bn"><b>১. মেন্ডেলের বংশগতি সূত্র:</b> অস্ট্রিয়ান যাজক গ্রেগর জোহান মেন্ডেল মটরশুঁটি নিয়ে গবেষণা করে বংশগতির দুটি সূত্র আবিষ্কার করেন। তিনি বংশগতির জনক। যখন দুটি সংকর লম্বা মটরশুঁটি গাছ (\\(Tt\\() প্রজনন করা হয়, পরবর্তী বংশধরদের লম্বা ও খাটোর ফেনোটাইপ অনুপাত হয় ৩:১ (\\(TT, Tt, Tt\\( লম্বা এবং \\(tt\\( খাটো)।</p>
+      <p class="en"><b>1. Mendelian Genetics:</b> Gregor Mendel formulated inheritance principles using pea plants. Crossing heterozygous tall plants (\\(Tt \times Tt\\() generates a phenotypic ratio of 3:1 (Tall:Short).</p>
+      <p class="bn"><b>২. জিন (Gene):</b> ক্রোমোজোমে অবস্থিত ডিএনএ (DNA) এর ক্ষুদ্র অংশ যা সুনির্দিষ্ট বৈশিষ্ট্য প্রকাশ করে। প্রভাববিস্তারকারী অ্যালিল হলো প্রকট (\\(T\\(), যা প্রচ্ছন্ন অ্যালিল (\\(t\\() এর প্রকাশকে বাধা দেয়।</p>
+      <p class="en"><b>2. Alleles:</b> Dominant alleles (\\(T\\() mask the expression of recessive alleles (\\(t\\().</p>
+    
+            </div>
+          </div>
+          
+          <!-- TAB 2: ACTIVITIES -->
+          <div class="tab-content" id="tab-activity">
+            <ul class="activity-list">
+              <li>
+                <span class="activity-tag">OUTCOME</span>
+                <strong><span class="bn">শিখনফল:</span><span class="en">Learning Outcome:</span></strong><br>
+                <span class="bn">মেন্ডেলিয়ান অনুপাত নির্ণয়ে পুনেট স্কয়ার (Punnett Square) ব্যবহার করা।</span>
+                <span class="en">Solve genetic crosses using Punnett square probability grids.</span>
+              </li>
+              <li>
+                <span class="activity-tag" style="background:rgba(95,224,224,0.15); color:var(--cyan);">ACTIVITY</span>
+                <strong><span class="bn">কার্যক্রম:</span><span class="en">Class Activity:</span></strong><br>
+                <span class="bn">মাতা ও পিতার জিনোম সংকর পরিবর্তন করে পুনেট স্কয়ারের অনুপাত গণনা করুন।</span>
+                <span class="en">Select parent genotypes and compute Tall vs Short pea phenotype ratios.</span>
+              </li>
+            </ul>
+          </div>
+          
+          <!-- TAB 3: EXTRA EXAMPLES / CALCULATORS -->
+          <div class="tab-content" id="tab-examples">
+            
+      <div style="background:rgba(255,255,255,0.03); border:1px solid var(--line); padding:15px; border-radius:8px;">
+        <h4 style="margin-top:0; color:var(--chalk-yellow);"><span class="bn">🌸 অসম্পূর্ণ প্রকটতা (Pink Flowers)</span><span class="en">🌸 Incomplete Dominance</span></h4>
+        <p style="font-size:0.75rem; opacity:0.8;">
+          <span class="bn">কিছু ক্ষেত্রে প্রকট জিন প্রচ্ছন্ন জিনকে সম্পূর্ণ দমন করতে পারে না। লাল ফুল (RR) ও সাদা ফুলের (WW) প্রজননে গোলাপী ফুল (RW) উৎপন্ন হয়।</span>
+          <span class="en">When Red (RR) and White (WW) flowers cross, offspring express intermediate Pink (RW) petals.</span>
+        </p>
+        <div style="font-size:0.8rem; font-weight:bold; color:var(--cyan); text-align:center;">
+          🔴 RR (Red) × ⚪ WW (White) = 🌸 RW (100% Pink)
+        </div>
+      </div>
+    
+          </div>
+          
+          <!-- TAB 4: QUIZ -->
+          <div class="tab-content" id="tab-quiz">
+            <div class="quiz-panel" id="quizPanel">
+              <!-- Quiz rendered dynamically by JS -->
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- RIGHT PANE: ANDROID DEVICE MOCKUP -->
+      <div>
+        <div class="android-device">
+          <div class="android-status-bar"><span class="time">09:42</span><div class="icons">📶 🔋 98%</div></div>
+          <div class="android-screen">
+            <div class="app-title-bar">
+              <span class="app-logo">🧬</span>
+              <span class="app-name">
+                <span class="bn">পুনেট স্কয়ার</span>
+                <span class="en">Punnett Breeder</span>
+              </span>
+            </div>
+            <div class="app-instruction">
+              <span class="bn">পিতা ও মাতার জিনোটাইপ নির্ধারণ করুন। পুনেট স্কয়ার ফলাফল ও অনুপাত নিচে দেখাবে।</span>
+              <span class="en">Select Parent 1 and Parent 2 genotypes. Calculate Punnett square allele combinations and phenotypic ratios.</span>
+            </div>
+            
+            <!-- Simulation UI Container -->
+            
+      <div style="display:flex; gap:10px;">
+        <div style="flex:1;">
+          <label style="font-size:0.6rem; opacity:0.7;">PARENT 1</label>
+          <select class="form-input" id="c8P1" style="padding:4px; font-size:0.75rem;" onchange="crossPeas()">
+            <option value="Tt">Tt (সংকর লম্বা)</option>
+            <option value="TT">TT (বিশুদ্ধ লম্বা)</option>
+            <option value="tt">tt (খাটো)</option>
+          </select>
+        </div>
+        <div style="flex:1;">
+          <label style="font-size:0.6rem; opacity:0.7;">PARENT 2</label>
+          <select class="form-input" id="c8P2" style="padding:4px; font-size:0.75rem;" onchange="crossPeas()">
+            <option value="Tt">Tt (সংকর লম্বা)</option>
+            <option value="TT">TT (বিশুদ্ধ লম্বা)</option>
+            <option value="tt">tt (খাটো)</option>
+          </select>
+        </div>
+      </div>
+      
+      <div class="c8-grid" id="c8Grid">
+        <!-- Genotypes cross box rendered by JS -->
+      </div>
+      
+      <div class="gauge-wrap" style="margin-top:12px; font-size:0.7rem;" id="c8Result">
+        Phenotype Ratio: 3 Tall : 1 Short
+      </div>
+    
+            
+          </div>
+          <div class="android-nav-bar">
+            <div class="back" onclick="history.back()"></div>
+            <div class="home" onclick="window.location.href='science.html'"></div>
+            <div class="recents"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+</div>
+
+<script src="science_common.js"></script>
+<script>
+  // Simple tab switching logic
+  function switchTab(btn, tabId) {
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById('tab-' + tabId).classList.add('active');
+    
+    // Play a click tick
+    AudioFX.init();
+  }
+</script>
+<script src="science_ch8.js"></script>
+</body>
+</html>

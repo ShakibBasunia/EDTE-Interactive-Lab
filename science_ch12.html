@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="bn" class="lang-bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ecosystems · Class 9-10 Science Portal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@500;600&family=Tiro+Bangla&family=Hind+Siliguri:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="science_style.css">
+</head>
+<body>
+
+<div class="app-container">
+  
+  <!-- PERSISTENT SIDEBAR INJECTED VIA COMMON.JS -->
+  <div class="sidebar" id="sidebar"></div>
+
+  <!-- MAIN CHAPTER CONTENT -->
+  <main class="main-content">
+    
+    <header class="lesson-header">
+      <div class="lesson-meta">
+        <span class="subject-badge biology">Biology</span>
+        <span class="eyebrow">Chapter 12</span>
+      </div>
+      <h1>
+        <span class="bn">বাস্তুতন্ত্র</span>
+        <span class="en">Ecosystems</span>
+      </h1>
+    </header>
+
+    <div class="grid2">
+      <!-- LEFT PANE: LESSONS, ACTIVITIES, EXTRA EXAMPLES, AND QUIZ -->
+      <div style="display:flex; flex-direction:column; gap:20px;">
+        <div class="content-pane">
+          <div class="tab-nav">
+            <button class="tab-btn active" onclick="switchTab(this, 'lesson')">
+              <span class="bn">📖 মূল তথ্য</span><span class="en">📖 Core Info</span>
+            </button>
+            <button class="tab-btn" onclick="switchTab(this, 'activity')">
+              <span class="bn">🏫 শ্রেণিকক্ষ কার্যক্রম</span><span class="en">🏫 Activities</span>
+            </button>
+            <button class="tab-btn" onclick="switchTab(this, 'examples')">
+              <span class="bn">💡 আরও উদাহরণ</span><span class="en">💡 More Examples</span>
+            </button>
+            <button class="tab-btn" onclick="switchTab(this, 'quiz')" id="quizTabBtn">
+              <span class="bn">📝 কুইজ টেস্ট</span><span class="en">📝 Quiz Test</span>
+            </button>
+          </div>
+          
+          <!-- TAB 1: THEORY -->
+          <div class="tab-content active" id="tab-lesson">
+            <p class="lede" style="font-size:1.1rem; line-height:1.6; color:var(--cyan); margin-bottom:15px;">
+              <span class="bn">বাস্তুতন্ত্রে উৎপাদক থেকে খাদ্য শৃঙ্খলের মাধ্যমে শক্তি ধাপে ধাপে সঞ্চারিত হয়।</span>
+              <span class="en">Ecosystem energy transfers between trophic levels from producers to apex predators.</span>
+            </p>
+            <div style="line-height:1.6; font-size:0.92rem; opacity:0.9;">
+              
+      <p class="bn"><b>১. বাস্তুতন্ত্রের উপাদান:</b> সজীব (জৈব) ও অজীব (অজৈব) উপাদানসমূহের পারস্পরিক সম্পর্কের জালের নাম বাস্তুতন্ত্র। উৎপাদক (সবুজ উদ্ভিদ) সালোকসংশ্লেষণে খাদ্য তৈরি করে যা প্রথম স্তরের খাদক (তৃণভোজী), দ্বিতীয় স্তরের খাদক (মাংসাশী) ও সর্বোচ্চ খাদক হয়ে বিয়োজকের মাধ্যমে পুনরায় চক্রাকারে ফিরে আসে।</p>
+      <p class="en"><b>1. Ecosystem Components:</b> Interactions between biotic and abiotic items. Producers transfer energy to herbivores, carnivores, apex predators, and decomposers.</p>
+      <p class="bn"><b>২. ১০% শক্তির সূত্র:</b> লিন্ডেম্যানের নিয়মানুযায়ী প্রতি স্তরে আগের স্তরের মাত্র ১০% শক্তি স্থানান্তরিত হয়, অবশিষ্ট ৯০% শক্তি বিপাকীয় কাজে ও তাপ হিসেবে অপচয় ঘটে। এজন্যই খাদ্য শৃঙ্খল বেশি দীর্ঘ হতে পারে না।</p>
+      <p class="en"><b>2. 10% Rule:</b> Only ~10% of energy transfers up to the next trophic level; 90% dissipates as heat.</p>
+    
+            </div>
+          </div>
+          
+          <!-- TAB 2: ACTIVITIES -->
+          <div class="tab-content" id="tab-activity">
+            <ul class="activity-list">
+              <li>
+                <span class="activity-tag">OUTCOME</span>
+                <strong><span class="bn">শিখনফল:</span><span class="en">Learning Outcome:</span></strong><br>
+                <span class="bn">খাদ্য শৃঙ্খলে শক্তির প্রবাহ এবং ট্রফিক লেভেলের পারস্পরিক নির্ভরতা ব্যাখ্যা করা।</span>
+                <span class="en">Analyze food chain structures and compute 10% trophic energy transfers.</span>
+              </li>
+              <li>
+                <span class="activity-tag" style="background:rgba(95,224,224,0.15); color:var(--cyan);">ACTIVITY</span>
+                <strong><span class="bn">কার্যক্রম:</span><span class="en">Class Activity:</span></strong><br>
+                <span class="bn">উদ্ভিদ ও প্রাণীদের সঠিক খাদ্য ক্রমানুসারে সাজিয়ে শক্তি প্রবাহ সম্পূর্ণ করুন।</span>
+                <span class="en">Sequence species correctly to complete the energy flow arrow path.</span>
+              </li>
+            </ul>
+          </div>
+          
+          <!-- TAB 3: EXTRA EXAMPLES / CALCULATORS -->
+          <div class="tab-content" id="tab-examples">
+            
+      <div style="background:rgba(255,255,255,0.03); border:1px solid var(--line); padding:15px; border-radius:8px;">
+        <h4 style="margin-top:0; color:var(--chalk-yellow);"><span class="bn">☣️ জৈববর্ধন (Biomagnification)</span><span class="en">☣️ Biomagnification Tracker</span></h4>
+        <p style="font-size:0.75rem; opacity:0.8;">
+          <span class="bn">অনমনীয় কীটনাশক (যেমন DDT) ট্রফিক স্তরের উচ্চ ধাপে জ্যামিতিক হারে ঘনীভূত হয়। বিষাক্ততা মাত্রা বৃদ্ধি দেখুন:</span>
+          <span class="en">Non-biodegradable toxins accumulate exponentially up the food chain. Trigger spray:</span>
+        </p>
+        <button class="p-btn" onclick="sprayToxin()" style="width:100%;">☣️ Spray Pesticide</button>
+        <div style="font-size:0.78rem; font-weight:bold; color:var(--cyan); margin-top:8px; line-height:1.45;" id="toxinResult">
+          Soil: 0 ppm (Safe)
+        </div>
+      </div>
+    
+          </div>
+          
+          <!-- TAB 4: QUIZ -->
+          <div class="tab-content" id="tab-quiz">
+            <div class="quiz-panel" id="quizPanel">
+              <!-- Quiz rendered dynamically by JS -->
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- RIGHT PANE: ANDROID DEVICE MOCKUP -->
+      <div>
+        <div class="android-device">
+          <div class="android-status-bar"><span class="time">09:42</span><div class="icons">📶 🔋 98%</div></div>
+          <div class="android-screen">
+            <div class="app-title-bar">
+              <span class="app-logo">🐸</span>
+              <span class="app-name">
+                <span class="bn">খাদ্য শৃঙ্খল খেলা</span>
+                <span class="en">Food Chain Game</span>
+              </span>
+            </div>
+            <div class="app-instruction">
+              <span class="bn">উৎপাদক থেকে খাদকদের সঠিক ক্রমানুসারে ক্লিক করুন (ঘাস ➔ পোকা ➔ ব্যাঙ ➔ সাপ) যাতে শক্তি প্রবাহ সচল হয়।</span>
+              <span class="en">Click nodes in correct ecological sequence (Grass ➔ Insect ➔ Frog ➔ Snake) to trigger energy flow.</span>
+            </div>
+            
+            <!-- Simulation UI Container -->
+            
+      <div class="c12-chain">
+        <div class="c12-node" id="n1" onclick="clickNode(1)">🌾</div>
+        <div class="c12-connector" id="c1">➔</div>
+        <div class="c12-node" id="n2" onclick="clickNode(2)">🐛</div>
+        <div class="c12-connector" id="c2">➔</div>
+        <div class="c12-node" id="n3" onclick="clickNode(3)">🐸</div>
+        <div class="c12-connector" id="c3">➔</div>
+        <div class="c12-node" id="n4" onclick="clickNode(4)">🐍</div>
+      </div>
+      <div class="gauge-wrap" style="margin-top:15px; text-align:center; font-size:0.75rem;" id="c12Status">
+        <span class="bn">অসম্পূর্ণ চেইন (Chain Incomplete)</span>
+        <span class="en">Chain Incomplete</span>
+      </div>
+    
+            
+          </div>
+          <div class="android-nav-bar">
+            <div class="back" onclick="history.back()"></div>
+            <div class="home" onclick="window.location.href='science.html'"></div>
+            <div class="recents"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+</div>
+
+<script src="science_common.js"></script>
+<script>
+  // Simple tab switching logic
+  function switchTab(btn, tabId) {
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById('tab-' + tabId).classList.add('active');
+    
+    // Play a click tick
+    AudioFX.init();
+  }
+</script>
+<script src="science_ch12.js"></script>
+</body>
+</html>
